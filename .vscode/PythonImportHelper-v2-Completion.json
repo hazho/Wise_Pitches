@@ -1,0 +1,234 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Bootstrap",
+        "importPath": "flask_bootstrap",
+        "description": "flask_bootstrap",
+        "isExtraImport": true,
+        "detail": "flask_bootstrap",
+        "documentation": {
+            "value": "\n```python\nimport flask_bootstrap\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "config_options",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {
+            "value": "\n```python\nimport config\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {
+            "value": "\n```python\nimport flask_sqlalchemy\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {
+            "value": "\n```python\nimport os\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "create_app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {
+            "value": "\n```python\nimport app\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "db",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {
+            "value": "\n```python\nimport app\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Manager",
+        "importPath": "flask_script",
+        "description": "flask_script",
+        "isExtraImport": true,
+        "detail": "flask_script",
+        "documentation": {
+            "value": "\n```python\nimport flask_script\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Server",
+        "importPath": "flask_script",
+        "description": "flask_script",
+        "isExtraImport": true,
+        "detail": "flask_script",
+        "documentation": {
+            "value": "\n```python\nimport flask_script\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "create_app",
+        "kind": 2,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n    app.register_blueprint(main_blueprint)",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n    app.register_blueprint(main_blueprint)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "bootstrap",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "db = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    @staticmethod\n    def init_app(app):\n        pass\nclass ProdConfig(Config):\n    '''\n    Production  configuration child class",
+        "detail": "config",
+        "documentation": {
+            "value": "\n```python\nfrom config import Config\n```\n\n```python\n\n\n```\n\n```python\nclass Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    @staticmethod\n    def init_app(app):\n        pass\nclass ProdConfig(Config):\n    '''\n    Production  configuration child class\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "ProdConfig",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class ProdConfig(Config):\n    '''\n    Production  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    pass\nclass DevConfig(Config):\n    '''\n    Development  configuration child class",
+        "detail": "config",
+        "documentation": {
+            "value": "\n```python\nfrom config import ProdConfig\n```\n\n```python\n\n\n```\n\n```python\nclass ProdConfig(Config):\n    '''\n    Production  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    pass\nclass DevConfig(Config):\n    '''\n    Development  configuration child class\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "DevConfig",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class DevConfig(Config):\n    '''\n    Development  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    DEBUG = True\nconfig_options = {\n'development':DevConfig,\n'production':ProdConfig,",
+        "detail": "config",
+        "documentation": {
+            "value": "\n```python\nfrom config import DevConfig\n```\n\n```python\n\n\n```\n\n```python\nclass DevConfig(Config):\n    '''\n    Development  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    DEBUG = True\nconfig_options = {\n'development':DevConfig,\n'production':ProdConfig,\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "config_options",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "config_options = {\n'development':DevConfig,\n'production':ProdConfig,\n}",
+        "detail": "config",
+        "documentation": {
+            "value": "\n```python\nfrom config import config_options\n```\n\n```python\n\n\n```\n\n```python\nconfig_options = {\n'development':DevConfig,\n'production':ProdConfig,\n}\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()",
+        "detail": "manage",
+        "documentation": {
+            "value": "\n```python\nfrom manage import test\n```\n\n```python\n\n\n```\n\n```python\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "make_shell_context",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()",
+        "detail": "manage",
+        "documentation": {
+            "value": "\n```python\nfrom manage import make_shell_context\n```\n\n```python\n\n\n```\n\n```python\ndef make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "app = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell",
+        "detail": "manage",
+        "documentation": {
+            "value": "\n```python\nfrom manage import app\n```\n\n```python\n\n\n```\n\n```python\napp = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "manager",
+        "kind": 5,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "manager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():",
+        "detail": "manage",
+        "documentation": {
+            "value": "\n```python\nfrom manage import manager\n```\n\n```python\n\n\n```\n\n```python\nmanager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n```\n",
+            "supportThemeIcons": false
+        }
+    }
+]
