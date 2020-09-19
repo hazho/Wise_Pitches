@@ -1,5 +1,27 @@
 [
     {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -100,6 +122,41 @@
         }
     },
     {
+        "label": "User",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nimport app.models\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "app.auth.__init__",
+        "description": "app.auth.__init__",
+        "peekOfCode": "auth = Blueprint('auth',__name__)\nfrom . import views,forms",
+        "detail": "app.auth.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.auth.__init__ import auth\n```\n\n```python\n\n\n```\n\n```python\nauth = Blueprint('auth',__name__)\nfrom . import views,forms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "main",
+        "kind": 5,
+        "importPath": "app.main.__init__",
+        "description": "app.main.__init__",
+        "peekOfCode": "main = Blueprint('main',__name__)\nfrom . import views,error",
+        "detail": "app.main.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.__init__ import main\n```\n\n```python\n\n\n```\n\n```python\nmain = Blueprint('main',__name__)\nfrom . import views,error\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "create_app",
         "kind": 2,
         "importPath": "app.__init__",
@@ -132,6 +189,18 @@
         "detail": "app.__init__",
         "documentation": {
             "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class User(db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    username = db.Column(db.String(255))\n    def __repr__(self):\n        return f'User {self.username}'",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    username = db.Column(db.String(255))\n    def __repr__(self):\n        return f'User {self.username}'\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -188,10 +257,10 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()",
+        "peekOfCode": "def test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db,User = User )\nif __name__ == '__main__':\n    manager.run()",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import test\n```\n\n```python\n\n\n```\n\n```python\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()\n```\n",
+            "value": "\n```python\nfrom manage import test\n```\n\n```python\n\n\n```\n\n```python\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db,User = User )\nif __name__ == '__main__':\n    manager.run()\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -200,10 +269,10 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()",
+        "peekOfCode": "def make_shell_context():\n    return dict(app = app,db = db,User = User )\nif __name__ == '__main__':\n    manager.run()",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import make_shell_context\n```\n\n```python\n\n\n```\n\n```python\ndef make_shell_context():\n    return dict(app = app,db = db)\nif __name__ == '__main__':\n    manager.run()\n```\n",
+            "value": "\n```python\nfrom manage import make_shell_context\n```\n\n```python\n\n\n```\n\n```python\ndef make_shell_context():\n    return dict(app = app,db = db,User = User )\nif __name__ == '__main__':\n    manager.run()\n```\n",
             "supportThemeIcons": false
         }
     },
