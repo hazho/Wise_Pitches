@@ -22,6 +22,50 @@
         }
     },
     {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Blueprint",
         "importPath": "flask",
         "description": "flask",
@@ -205,6 +249,39 @@
         "detail": "wtforms.validators",
         "documentation": {
             "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -561,10 +638,46 @@
         "kind": 2,
         "importPath": "app.auth.views",
         "description": "app.auth.views",
-        "peekOfCode": "def login():\n    return render_template('auth/login.html')",
+        "peekOfCode": "def login():\n    login_form = LoginForm()\n    if login_form.validate_on_submit():\n        user = User.query.filter_by(email = login_form.email.data).first()\n        if user is not None and user.verify_password(login_form.password.data):\n            login_user(user,login_form.remember.data)\n            return redirect(request.args.get('next') or url_for('main.index'))\n        flash('Invalid author or Password')\n    title = \"Pitches login\"\n    return render_template('auth/login.html',login_form = login_form,title=title)",
         "detail": "app.auth.views",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.views import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    return render_template('auth/login.html')\n```\n",
+            "value": "\n```python\nfrom app.auth.views import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    login_form = LoginForm()\n    if login_form.validate_on_submit():\n        user = User.query.filter_by(email = login_form.email.data).first()\n        if user is not None and user.verify_password(login_form.password.data):\n            login_user(user,login_form.remember.data)\n            return redirect(request.args.get('next') or url_for('main.index'))\n        flash('Invalid author or Password')\n    title = \"Pitches login\"\n    return render_template('auth/login.html',login_form = login_form,title=title)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "app.auth.views",
+        "description": "app.auth.views",
+        "peekOfCode": "def register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"",
+        "detail": "app.auth.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.auth.views import register\n```\n\n```python\n\n\n```\n\n```python\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "app.auth.views",
+        "description": "app.auth.views",
+        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for(\"main.index\"))",
+        "detail": "app.auth.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.auth.views import logout\n```\n\n```python\n\n\n```\n\n```python\ndef logout():\n    logout_user()\n    return redirect(url_for(\"main.index\"))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "@auth.route('/register',methods",
+        "kind": 5,
+        "importPath": "app.auth.views",
+        "description": "app.auth.views",
+        "peekOfCode": "@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)",
+        "detail": "app.auth.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.auth.views import @auth.route('/register',methods\n```\n\n```python\n\n\n```\n\n```python\n@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)\n```\n",
             "supportThemeIcons": false
         }
     },
