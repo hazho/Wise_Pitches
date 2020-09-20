@@ -110,6 +110,105 @@
         }
     },
     {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {
+            "value": "\n```python\nimport flask_wtf\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "BooleanField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Required",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Email",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "EqualTo",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "login_required",
         "importPath": "flask_login",
         "description": "flask_login",
@@ -430,6 +529,30 @@
         "detail": "app.auth.__init__",
         "documentation": {
             "value": "\n```python\nfrom app.auth.__init__ import auth\n```\n\n```python\n\n\n```\n\n```python\nauth = Blueprint('auth',__name__)\nfrom . import views,forms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "RegistrationForm",
+        "kind": 6,
+        "importPath": "app.auth.forms",
+        "description": "app.auth.forms",
+        "peekOfCode": "class RegistrationForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    author = StringField('Enter authors name',validators = [Required()])\n    password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match')])\n    password_confirm = PasswordField('Confirm Passwords',validators = [Required()])\n    submit = SubmitField('Sign Up')\n    def validate_email(self,data_field):\n            if User.query.filter_by(email =data_field.data).first():\n                raise ValidationError('There is an account with that email')\n    def validate_author(self,data_field):",
+        "detail": "app.auth.forms",
+        "documentation": {
+            "value": "\n```python\nfrom app.auth.forms import RegistrationForm\n```\n\n```python\n\n\n```\n\n```python\nclass RegistrationForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    author = StringField('Enter authors name',validators = [Required()])\n    password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match')])\n    password_confirm = PasswordField('Confirm Passwords',validators = [Required()])\n    submit = SubmitField('Sign Up')\n    def validate_email(self,data_field):\n            if User.query.filter_by(email =data_field.data).first():\n                raise ValidationError('There is an account with that email')\n    def validate_author(self,data_field):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "app.auth.forms",
+        "description": "app.auth.forms",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    password = PasswordField('Password',validators =[Required()])\n    remember = BooleanField('Remember me')\n    submit = SubmitField('Sign In')",
+        "detail": "app.auth.forms",
+        "documentation": {
+            "value": "\n```python\nfrom app.auth.forms import LoginForm\n```\n\n```python\n\n\n```\n\n```python\nclass LoginForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    password = PasswordField('Password',validators =[Required()])\n    remember = BooleanField('Remember me')\n    submit = SubmitField('Sign In')\n```\n",
             "supportThemeIcons": false
         }
     },
