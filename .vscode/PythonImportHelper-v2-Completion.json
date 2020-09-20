@@ -11,6 +11,17 @@
         }
     },
     {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Blueprint",
         "importPath": "flask",
         "description": "flask",
@@ -324,6 +335,18 @@
         }
     },
     {
+        "label": "login",
+        "kind": 2,
+        "importPath": "app.auth.views",
+        "description": "app.auth.views",
+        "peekOfCode": "def login():\n    return render_template('auth/login.html')",
+        "detail": "app.auth.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.auth.views import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    return render_template('auth/login.html')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "main",
         "kind": 5,
         "importPath": "app.main.__init__",
@@ -532,10 +555,10 @@
         "kind": 6,
         "importPath": "tests.user_test",
         "description": "tests.user_test",
-        "peekOfCode": "class UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'coyotte@2000')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)",
+        "peekOfCode": "class UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'coyotte@2000')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)\n    def test_no_access_password(self):\n        with self.assertRaises(AttributeError):\n            self.new_user.password\n    def test_password_verification(self):\n        self.assertTrue(self.new_user.verify_password('banana'))",
         "detail": "tests.user_test",
         "documentation": {
-            "value": "\n```python\nfrom tests.user_test import UserModelTest\n```\n\n```python\n\n\n```\n\n```python\nclass UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'coyotte@2000')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)\n```\n",
+            "value": "\n```python\nfrom tests.user_test import UserModelTest\n```\n\n```python\n\n\n```\n\n```python\nclass UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'coyotte@2000')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)\n    def test_no_access_password(self):\n        with self.assertRaises(AttributeError):\n            self.new_user.password\n    def test_password_verification(self):\n        self.assertTrue(self.new_user.verify_password('banana'))\n```\n",
             "supportThemeIcons": false
         }
     },
