@@ -143,6 +143,17 @@
         }
     },
     {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "current_app",
         "importPath": "flask",
         "description": "flask",
@@ -359,6 +370,39 @@
         "detail": "flask_sqlalchemy",
         "documentation": {
             "value": "\n```python\nimport flask_sqlalchemy\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Mail",
+        "importPath": "flask_mail",
+        "description": "flask_mail",
+        "isExtraImport": true,
+        "detail": "flask_mail",
+        "documentation": {
+            "value": "\n```python\nimport flask_mail\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Message",
+        "importPath": "flask_mail",
+        "description": "flask_mail",
+        "isExtraImport": true,
+        "detail": "flask_mail",
+        "documentation": {
+            "value": "\n```python\nimport flask_mail\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "SimpleMDE",
+        "importPath": "flask_simplemde",
+        "description": "flask_simplemde",
+        "isExtraImport": true,
+        "detail": "flask_simplemde",
+        "documentation": {
+            "value": "\n```python\nimport flask_simplemde\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -722,10 +766,10 @@
         "kind": 2,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint",
+        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)\n   # Registering the blueprint",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n```\n",
+            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)\n   # Registering the blueprint\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -734,10 +778,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions",
+        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n```\n",
+            "value": "\n```python\nfrom app.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -746,10 +790,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "login_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)",
+        "peekOfCode": "login_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager.session_protection\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import login_manager.session_protection\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -758,10 +802,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "login_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)",
+        "peekOfCode": "login_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -770,10 +814,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)",
+        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -782,10 +826,46 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "db = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint",
+        "peekOfCode": "db = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint\n```\n",
+            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "mail",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "mail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import mail\n```\n\n```python\n\n\n```\n\n```python\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "simple",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "simple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import simple\n```\n\n```python\n\n\n```\n\n```python\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "mail_message",
+        "kind": 2,
+        "importPath": "app.email",
+        "description": "app.email",
+        "peekOfCode": "def mail_message(subject,template,to,**kwargs):\n    sender_email='akumucollins001@gmail.com'\n    email = Message(subject, sender=sender_email, recipients=[to])\n    email.body= render_template(template + \".txt\",**kwargs)\n    email.html = render_template(template + \".html\",**kwargs)\n    mail.send(email)",
+        "detail": "app.email",
+        "documentation": {
+            "value": "\n```python\nfrom app.email import mail_message\n```\n\n```python\n\n\n```\n\n```python\ndef mail_message(subject,template,to,**kwargs):\n    sender_email='akumucollins001@gmail.com'\n    email = Message(subject, sender=sender_email, recipients=[to])\n    email.body= render_template(template + \".txt\",**kwargs)\n    email.html = render_template(template + \".html\",**kwargs)\n    mail.send(email)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1034,10 +1114,10 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    @staticmethod\n    def init_app(app):\n        pass\nclass ProdConfig(Config):\n    '''\n    Production  configuration child class",
+        "peekOfCode": "class Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    # simple mde  configurations\n    SIMPLEMDE_JS_IIFE = True\n    SIMPLEMDE_USE_CDN = True\n    @staticmethod\n    def init_app(app):\n        pass",
         "detail": "config",
         "documentation": {
-            "value": "\n```python\nfrom config import Config\n```\n\n```python\n\n\n```\n\n```python\nclass Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    @staticmethod\n    def init_app(app):\n        pass\nclass ProdConfig(Config):\n    '''\n    Production  configuration child class\n```\n",
+            "value": "\n```python\nfrom config import Config\n```\n\n```python\n\n\n```\n\n```python\nclass Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    # simple mde  configurations\n    SIMPLEMDE_JS_IIFE = True\n    SIMPLEMDE_USE_CDN = True\n    @staticmethod\n    def init_app(app):\n        pass\n```\n",
             "supportThemeIcons": false
         }
     },
