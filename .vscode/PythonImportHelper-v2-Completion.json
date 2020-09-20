@@ -44,6 +44,50 @@
         }
     },
     {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -62,6 +106,39 @@
         "detail": "flask",
         "documentation": {
             "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "LoginManager",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -371,14 +448,62 @@
         }
     },
     {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import index\n```\n\n```python\n\n\n```\n\n```python\ndef index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "create_app",
         "kind": 2,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n    app.register_blueprint(main_blueprint)",
+        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n    app.register_blueprint(main_blueprint)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager.session_protection",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "login_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import login_manager.session_protection\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager.login_view",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "login_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -387,10 +512,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint",
+        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n```\n",
+            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -399,10 +524,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "db = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint",
+        "peekOfCode": "db = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n   # Registering the blueprint\n    from .main import main as main_blueprint\n```\n",
+            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n   # Registering the blueprint\n```\n",
             "supportThemeIcons": false
         }
     },
