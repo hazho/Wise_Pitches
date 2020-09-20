@@ -22,6 +22,17 @@
         }
     },
     {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -153,6 +164,18 @@
         "detail": "app.main.__init__",
         "documentation": {
             "value": "\n```python\nfrom app.main.__init__ import main\n```\n\n```python\n\n\n```\n\n```python\nmain = Blueprint('main',__name__)\nfrom . import views,error\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "four_Oh_four",
+        "kind": 2,
+        "importPath": "app.main.error",
+        "description": "app.main.error",
+        "peekOfCode": "def four_Oh_four(error):\n    '''\n    Function to render the 404 error page\n    '''\n    return render_template('fourOhfour.html'),404",
+        "detail": "app.main.error",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.error import four_Oh_four\n```\n\n```python\n\n\n```\n\n```python\ndef four_Oh_four(error):\n    '''\n    Function to render the 404 error page\n    '''\n    return render_template('fourOhfour.html'),404\n```\n",
             "supportThemeIcons": false
         }
     },
