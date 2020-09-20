@@ -566,6 +566,18 @@
         }
     },
     {
+        "label": "load_user",
+        "kind": 2,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    @property\n    def password(self):",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    @property\n    def password(self):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "upgrade",
         "kind": 2,
         "importPath": "migrations.versions.2a68210171ca_initial_migration",
