@@ -1,9 +1,11 @@
 from flask import render_template,request,redirect,url_for,abort
 from flask_login import login_required,current_user
-from ..models import User
+from ..models import User,PhotoProfile
 from . import main
 from .. import db,photos
 from .forms import UpdateProfile
+import markdown2
+
 
 @main.route('/')
 def index():
@@ -34,6 +36,7 @@ def update_profile(uname):
     form = UpdateProfile()
 
     if form.validate_on_submit():
+
         user.bio = form.bio.data
 
         db.session.add(user)
@@ -43,6 +46,7 @@ def update_profile(uname):
 
     return render_template('profile/update.html',form =form)
 
+
 @main.route('/user/<uname>/update/pic',methods= ['POST'])
 @login_required
 def update_pic(uname):
@@ -51,6 +55,6 @@ def update_pic(uname):
         filename = photos.save(request.files['photo'])
         path = f'photos/{filename}'
         user.profile_pic_path = path
+        user_photo = PhotoProfile(pic_path = path,user = user)
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
-

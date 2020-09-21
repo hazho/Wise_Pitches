@@ -418,6 +418,18 @@
         }
     },
     {
+        "label": "markdown2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "markdown2",
+        "description": "markdown2",
+        "detail": "markdown2",
+        "documentation": {
+            "value": "\n```python\nimport markdown2\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Bootstrap",
         "importPath": "flask_bootstrap",
         "description": "flask_bootstrap",
@@ -535,6 +547,17 @@
         "detail": "werkzeug.security",
         "documentation": {
             "value": "\n```python\nimport werkzeug.security\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {
+            "value": "\n```python\nimport alembic\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -804,10 +827,10 @@
         "kind": 2,
         "importPath": "app.auth.views",
         "description": "app.auth.views",
-        "peekOfCode": "def register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"",
+        "peekOfCode": "def register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"",
         "detail": "app.auth.views",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.views import register\n```\n\n```python\n\n\n```\n\n```python\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"\n```\n",
+            "value": "\n```python\nfrom app.auth.views import register\n```\n\n```python\n\n\n```\n\n```python\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -828,10 +851,10 @@
         "kind": 5,
         "importPath": "app.auth.views",
         "description": "app.auth.views",
-        "peekOfCode": "@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)",
+        "peekOfCode": "@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)",
         "detail": "app.auth.views",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.views import @auth.route('/register',methods\n```\n\n```python\n\n\n```\n\n```python\n@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to Pitch It Up!\",\"email/welcome_user\",user.email,user=user)\n```\n",
+            "value": "\n```python\nfrom app.auth.views import @auth.route('/register',methods\n```\n\n```python\n\n\n```\n\n```python\n@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -912,10 +935,10 @@
         "kind": 2,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "def update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))",
+        "peekOfCode": "def update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        user_photo = PhotoProfile(pic_path = path,user = user)\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import update_pic\n```\n\n```python\n\n\n```\n\n```python\ndef update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))\n```\n",
+            "value": "\n```python\nfrom app.main.views import update_pic\n```\n\n```python\n\n\n```\n\n```python\ndef update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        user_photo = PhotoProfile(pic_path = path,user = user)\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1052,14 +1075,26 @@
         }
     },
     {
+        "label": "PhotoProfile",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import PhotoProfile\n```\n\n```python\n\n\n```\n\n```python\nclass PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "app.models",
         "description": "app.models",
-        "peekOfCode": "class User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    @property\n    def password(self):\n        raise AttributeError('You cannot read the password attribute')\n    @password.setter",
+        "peekOfCode": "class User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    photos = db.relationship('PhotoProfile',backref = 'user',lazy = \"dynamic\")\n    @property",
         "detail": "app.models",
         "documentation": {
-            "value": "\n```python\nfrom app.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    @property\n    def password(self):\n        raise AttributeError('You cannot read the password attribute')\n    @password.setter\n```\n",
+            "value": "\n```python\nfrom app.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    photos = db.relationship('PhotoProfile',backref = 'user',lazy = \"dynamic\")\n    @property\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1068,10 +1103,82 @@
         "kind": 2,
         "importPath": "app.models",
         "description": "app.models",
-        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    @property\n    def password(self):",
+        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)",
         "detail": "app.models",
         "documentation": {
-            "value": "\n```python\nfrom app.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    @property\n    def password(self):\n```\n",
+            "value": "\n```python\nfrom app.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.0bf01389addf_initial_migration",
+        "description": "migrations.versions.0bf01389addf_initial_migration",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.add_column('users', sa.Column('bio', sa.String(length=255), nullable=True))",
+        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "documentation": {
+            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import upgrade\n```\n\n```python\n\n\n```\n\n```python\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.add_column('users', sa.Column('bio', sa.String(length=255), nullable=True))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.0bf01389addf_initial_migration",
+        "description": "migrations.versions.0bf01389addf_initial_migration",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'profile_pic_path')\n    op.drop_column('users', 'bio')\n    op.drop_table('profile_photos')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "documentation": {
+            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import downgrade\n```\n\n```python\n\n\n```\n\n```python\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'profile_pic_path')\n    op.drop_column('users', 'bio')\n    op.drop_table('profile_photos')\n    # ### end Alembic commands ###\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "revision",
+        "kind": 5,
+        "importPath": "migrations.versions.0bf01389addf_initial_migration",
+        "description": "migrations.versions.0bf01389addf_initial_migration",
+        "peekOfCode": "revision = '0bf01389addf'\ndown_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),",
+        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "documentation": {
+            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import revision\n```\n\n```python\n\n\n```\n\n```python\nrevision = '0bf01389addf'\ndown_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "down_revision",
+        "kind": 5,
+        "importPath": "migrations.versions.0bf01389addf_initial_migration",
+        "description": "migrations.versions.0bf01389addf_initial_migration",
+        "peekOfCode": "down_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),",
+        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "documentation": {
+            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import down_revision\n```\n\n```python\n\n\n```\n\n```python\ndown_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "branch_labels",
+        "kind": 5,
+        "importPath": "migrations.versions.0bf01389addf_initial_migration",
+        "description": "migrations.versions.0bf01389addf_initial_migration",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')",
+        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "documentation": {
+            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import branch_labels\n```\n\n```python\n\n\n```\n\n```python\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "depends_on",
+        "kind": 5,
+        "importPath": "migrations.versions.0bf01389addf_initial_migration",
+        "description": "migrations.versions.0bf01389addf_initial_migration",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )",
+        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "documentation": {
+            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import depends_on\n```\n\n```python\n\n\n```\n\n```python\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n```\n",
             "supportThemeIcons": false
         }
     },
