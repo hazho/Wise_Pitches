@@ -1,0 +1,26 @@
+<div
+    style="background-image: url('../static/photos/two.jpeg');height: 106.5vh;background-repeat: no-repeat;background-size: cover;">
+    {% extends 'base.html'%}
+    <!-- Styles block -->
+    {% block styles%} {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock %}
+    <!-- Content block -->
+    {% block content %}
+    <div class="container  mt-0 mb-0" style="text-align: center;font-family:'Open Sans', sans-serif;">
+        <img src="../static/photos/pitch1.png" style="height:80px;width:80px" ;>
+        <h1 style="font-size:50px; color: yellow;">Welcome To <span style="font-size: 45; color: black;">One Minute
+                Pitch</span> </h1>
+        <h3 style="font-family: 'Noto Serif KR', sans-serif; color: white;font-size: 30px;">In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure
+            that you use your 1 minute to actually say something meaningful?</h3>
+        <h3 style="font-family: 'Noto Serif KR', sans-serif; color: black;font-size: 28px;">You will use that 60 seconds meaningful and wisely here!</h3>
+    </div>
+    <div class="text-center" style="font-family: 'Oswald', sans-serif;">
+        <button type="button" class="btn btn-success btn-lg"><a href="auth/register">Registerd</a></button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-success btn-lg text-white"><a href="auth/login">Sign In</a></button>
+    </div>
+
+    {% endblock %}
+</div>

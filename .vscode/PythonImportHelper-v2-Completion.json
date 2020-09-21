@@ -132,6 +132,17 @@
         }
     },
     {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -161,6 +172,17 @@
         "detail": "flask",
         "documentation": {
             "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {
+            "value": "\n```python\nimport flask_wtf\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -231,6 +253,50 @@
         }
     },
     {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "TextAreaField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "SelectField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Required",
         "importPath": "wtforms.validators",
         "description": "wtforms.validators",
@@ -254,6 +320,17 @@
     },
     {
         "label": "EqualTo",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Required",
         "importPath": "wtforms.validators",
         "description": "wtforms.validators",
         "isExtraImport": true,
@@ -370,6 +447,39 @@
         "detail": "flask_sqlalchemy",
         "documentation": {
             "value": "\n```python\nimport flask_sqlalchemy\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "UploadSet",
+        "importPath": "flask_uploads",
+        "description": "flask_uploads",
+        "isExtraImport": true,
+        "detail": "flask_uploads",
+        "documentation": {
+            "value": "\n```python\nimport flask_uploads\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "configure_uploads",
+        "importPath": "flask_uploads",
+        "description": "flask_uploads",
+        "isExtraImport": true,
+        "detail": "flask_uploads",
+        "documentation": {
+            "value": "\n```python\nimport flask_uploads\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "IMAGES",
+        "importPath": "flask_uploads",
+        "description": "flask_uploads",
+        "isExtraImport": true,
+        "detail": "flask_uploads",
+        "documentation": {
+            "value": "\n```python\nimport flask_uploads\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -750,14 +860,74 @@
         }
     },
     {
+        "label": "UpdateProfile",
+        "kind": 6,
+        "importPath": "app.main.forms",
+        "description": "app.main.forms",
+        "peekOfCode": "class UpdateProfile(FlaskForm):\n    bio = TextAreaField('Tell us about you.',validators = [Required()])\n    submit = SubmitField('Submit')",
+        "detail": "app.main.forms",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.forms import UpdateProfile\n```\n\n```python\n\n\n```\n\n```python\nclass UpdateProfile(FlaskForm):\n    bio = TextAreaField('Tell us about you.',validators = [Required()])\n    submit = SubmitField('Submit')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "index",
         "kind": 2,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "def index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)",
+        "peekOfCode": "def index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)\n@main.route('/user/<uname>')\ndef profile(uname):\n    user = User.query.filter_by(author = uname).first()",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import index\n```\n\n```python\n\n\n```\n\n```python\ndef index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)\n```\n",
+            "value": "\n```python\nfrom app.main.views import index\n```\n\n```python\n\n\n```\n\n```python\ndef index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)\n@main.route('/user/<uname>')\ndef profile(uname):\n    user = User.query.filter_by(author = uname).first()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "profile",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    return render_template(\"profile/profile.html\", user = user)\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import profile\n```\n\n```python\n\n\n```\n\n```python\ndef profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    return render_template(\"profile/profile.html\", user = user)\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "update_profile",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n        db.session.commit()\n        return redirect(url_for('.profile',uname=user.author))",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import update_profile\n```\n\n```python\n\n\n```\n\n```python\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n        db.session.commit()\n        return redirect(url_for('.profile',uname=user.author))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "update_pic",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import update_pic\n```\n\n```python\n\n\n```\n\n```python\ndef update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "@main.route('/user/<uname>/update',methods",
+        "kind": 5,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import @main.route('/user/<uname>/update',methods\n```\n\n```python\n\n\n```\n\n```python\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -778,10 +948,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations",
+        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n```\n",
+            "value": "\n```python\nfrom app.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -790,10 +960,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "login_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])",
+        "peekOfCode": "login_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager.session_protection\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n```\n",
+            "value": "\n```python\nfrom app.__init__ import login_manager.session_protection\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -802,10 +972,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "login_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions",
+        "peekOfCode": "login_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n```\n",
+            "value": "\n```python\nfrom app.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -814,10 +984,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)",
+        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -826,10 +996,22 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "db = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)",
+        "peekOfCode": "db = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "photos",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "photos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import photos\n```\n\n```python\n\n\n```\n\n```python\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
