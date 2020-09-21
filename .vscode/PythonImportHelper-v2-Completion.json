@@ -1296,10 +1296,10 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    # simple mde  configurations\n    SIMPLEMDE_JS_IIFE = True\n    SIMPLEMDE_USE_CDN = True\n    @staticmethod\n    def init_app(app):\n        pass",
+        "peekOfCode": "class Config:\n    '''\n    General configuration parent class\n    '''\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    #  email configurations\n    MAIL_SERVER = 'smtp.email.com'\n    MAIL_PORT = 587",
         "detail": "config",
         "documentation": {
-            "value": "\n```python\nfrom config import Config\n```\n\n```python\n\n\n```\n\n```python\nclass Config:\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    # simple mde  configurations\n    SIMPLEMDE_JS_IIFE = True\n    SIMPLEMDE_USE_CDN = True\n    @staticmethod\n    def init_app(app):\n        pass\n```\n",
+            "value": "\n```python\nfrom config import Config\n```\n\n```python\n\n\n```\n\n```python\nclass Config:\n    '''\n    General configuration parent class\n    '''\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    #  email configurations\n    MAIL_SERVER = 'smtp.email.com'\n    MAIL_PORT = 587\n```\n",
             "supportThemeIcons": false
         }
     },

@@ -1,10 +1,21 @@
 import os
 
 class Config:
-
+    '''
+    General configuration parent class
+    '''
     SECRET_KEY=os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
+    #  email configurations
+    MAIL_SERVER = 'smtp.email.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    SUBJECT_PREFIX = 'One Minute Pitch!'
+    SENDER_EMAIL = 'akumucollins001@gmail.com'
 
     # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
