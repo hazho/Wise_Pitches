@@ -936,10 +936,10 @@
         "kind": 2,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)\n   # Registering the blueprint",
+        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)\n   # Registering the blueprint\n```\n",
+            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -984,10 +984,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions",
+        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n```\n",
+            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -996,10 +996,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "db = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)",
+        "peekOfCode": "db = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1008,10 +1008,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "photos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)",
+        "peekOfCode": "photos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import photos\n```\n\n```python\n\n\n```\n\n```python\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import photos\n```\n\n```python\n\n\n```\n\n```python\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1020,10 +1020,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "mail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)",
+        "peekOfCode": "mail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import mail\n```\n\n```python\n\n\n```\n\n```python\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import mail\n```\n\n```python\n\n\n```\n\n```python\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1032,10 +1032,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "simple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)",
+        "peekOfCode": "simple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import simple\n```\n\n```python\n\n\n```\n\n```python\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # Initializing flask extensions\n    Bootstrap(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    simple.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import simple\n```\n\n```python\n\n\n```\n\n```python\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1296,10 +1296,10 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class Config:\n    '''\n    General configuration parent class\n    '''\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    #  email configurations\n    MAIL_SERVER = 'smtp.email.com'\n    MAIL_PORT = 587",
+        "peekOfCode": "class Config:\n    '''\n    General configuration parent class\n    '''\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    UPLOADED_PHOTOS_DEST ='app/static/photos'\n    #  email configurations\n    MAIL_SERVER = 'smtp.email.com'",
         "detail": "config",
         "documentation": {
-            "value": "\n```python\nfrom config import Config\n```\n\n```python\n\n\n```\n\n```python\nclass Config:\n    '''\n    General configuration parent class\n    '''\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    #  email configurations\n    MAIL_SERVER = 'smtp.email.com'\n    MAIL_PORT = 587\n```\n",
+            "value": "\n```python\nfrom config import Config\n```\n\n```python\n\n\n```\n\n```python\nclass Config:\n    '''\n    General configuration parent class\n    '''\n    SECRET_KEY=os.environ.get('SECRET_KEY')\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    UPLOADED_PHOTOS_DEST ='app/static/photos'\n    #  email configurations\n    MAIL_SERVER = 'smtp.email.com'\n```\n",
             "supportThemeIcons": false
         }
     },
