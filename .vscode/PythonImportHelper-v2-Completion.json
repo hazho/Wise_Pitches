@@ -1673,10 +1673,22 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class ProdConfig(Config):\n    '''\n    Production  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    pass\nclass DevConfig(Config):\n    '''\n    Development  configuration child class",
+        "peekOfCode": "class ProdConfig(Config):\n    '''\n    Production  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    SQLALCHEMY_DATABASE_URI = os.environ.get(\"DATABASE_URL\")\nclass TestConfig(Config):\n    '''\n    Test  configuration child class",
         "detail": "config",
         "documentation": {
-            "value": "\n```python\nfrom config import ProdConfig\n```\n\n```python\n\n\n```\n\n```python\nclass ProdConfig(Config):\n    '''\n    Production  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    pass\nclass DevConfig(Config):\n    '''\n    Development  configuration child class\n```\n",
+            "value": "\n```python\nfrom config import ProdConfig\n```\n\n```python\n\n\n```\n\n```python\nclass ProdConfig(Config):\n    '''\n    Production  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    SQLALCHEMY_DATABASE_URI = os.environ.get(\"DATABASE_URL\")\nclass TestConfig(Config):\n    '''\n    Test  configuration child class\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "TestConfig",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class TestConfig(Config):\n    '''\n    Test  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://james:password@localhost/oneminute_pitches_test'\nclass DevConfig(Config):\n    '''\n    Development  configuration child class",
+        "detail": "config",
+        "documentation": {
+            "value": "\n```python\nfrom config import TestConfig\n```\n\n```python\n\n\n```\n\n```python\nclass TestConfig(Config):\n    '''\n    Test  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://james:password@localhost/oneminute_pitches_test'\nclass DevConfig(Config):\n    '''\n    Development  configuration child class\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1685,10 +1697,10 @@
         "kind": 6,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "class DevConfig(Config):\n    '''\n    Development  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    DEBUG = True\nconfig_options = {\n'development':DevConfig,\n'production':ProdConfig,",
+        "peekOfCode": "class DevConfig(Config):\n    '''\n    Development  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    DEBUG = True\nconfig_options = {\n'development':DevConfig,",
         "detail": "config",
         "documentation": {
-            "value": "\n```python\nfrom config import DevConfig\n```\n\n```python\n\n\n```\n\n```python\nclass DevConfig(Config):\n    '''\n    Development  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    DEBUG = True\nconfig_options = {\n'development':DevConfig,\n'production':ProdConfig,\n```\n",
+            "value": "\n```python\nfrom config import DevConfig\n```\n\n```python\n\n\n```\n\n```python\nclass DevConfig(Config):\n    '''\n    Development  configuration child class\n    Args:\n        Config: The parent configuration class with General configuration settings\n    '''\n    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'\n    DEBUG = True\nconfig_options = {\n'development':DevConfig,\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1697,10 +1709,10 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "config_options = {\n'development':DevConfig,\n'production':ProdConfig,\n}",
+        "peekOfCode": "config_options = {\n'development':DevConfig,\n'production':ProdConfig,\n'test':TestConfig\n}",
         "detail": "config",
         "documentation": {
-            "value": "\n```python\nfrom config import config_options\n```\n\n```python\n\n\n```\n\n```python\nconfig_options = {\n'development':DevConfig,\n'production':ProdConfig,\n}\n```\n",
+            "value": "\n```python\nfrom config import config_options\n```\n\n```python\n\n\n```\n\n```python\nconfig_options = {\n'development':DevConfig,\n'production':ProdConfig,\n'test':TestConfig\n}\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1733,10 +1745,10 @@
         "kind": 5,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "app = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')",
+        "peekOfCode": "app = create_app('production')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import app\n```\n\n```python\n\n\n```\n\n```python\napp = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n```\n",
+            "value": "\n```python\nfrom manage import app\n```\n\n```python\n\n\n```\n\n```python\napp = create_app('production')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n```\n",
             "supportThemeIcons": false
         }
     },

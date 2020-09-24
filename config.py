@@ -33,8 +33,15 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
+class TestConfig(Config):
+    '''
+    Test  configuration child class
+    Args:
+        Config: The parent configuration class with General configuration settings
+    '''
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://james:password@localhost/oneminute_pitches_test'
 
 class DevConfig(Config):
     '''
@@ -42,9 +49,11 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:collins2000@localhost/oneminute_pitches'
     DEBUG = True
 
 config_options = {
 'development':DevConfig,
 'production':ProdConfig,
+'test':TestConfig
 }
