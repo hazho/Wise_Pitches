@@ -1097,10 +1097,10 @@
         "kind": 2,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "def new_pitch():\n    '''\n    Function that creates new pitches\n    '''\n    form = PitchForm()\n    my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)\n    if category is None:\n        abort( 404 )\n    if form.validate_on_submit():\n        pitch= form.content.data",
+        "peekOfCode": "def new_pitch():\n    '''\n    Function that creates new pitches\n    '''\n    form = PitchForm()\n    my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)\n    if category is None:\n        abort( 404 )\n    if form.validate_on_submit():\n        pitch= form.pitch.data",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import new_pitch\n```\n\n```python\n\n\n```\n\n```python\ndef new_pitch():\n    '''\n    Function that creates new pitches\n    '''\n    form = PitchForm()\n    my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)\n    if category is None:\n        abort( 404 )\n    if form.validate_on_submit():\n        pitch= form.content.data\n```\n",
+            "value": "\n```python\nfrom app.main.views import new_pitch\n```\n\n```python\n\n\n```\n\n```python\ndef new_pitch():\n    '''\n    Function that creates new pitches\n    '''\n    form = PitchForm()\n    my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)\n    if category is None:\n        abort( 404 )\n    if form.validate_on_submit():\n        pitch= form.pitch.data\n```\n",
             "supportThemeIcons": false
         }
     },

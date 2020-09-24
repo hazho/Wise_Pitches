@@ -113,7 +113,7 @@ def new_pitch():
         abort( 404 )
 
     if form.validate_on_submit():
-        pitch= form.content.data
+        pitch= form.pitch.data
         category_id = form.category_id.data
         new_pitch= Pitch(pitch= pitch, category_id= category_id)
 
