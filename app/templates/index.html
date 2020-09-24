@@ -11,13 +11,9 @@
 <div class="container text-center">
         {% for pitch in pitches %}
         <div class="thumbnail mt-4 panel bg-light text-center style=" style="box-shadow: 5px 5px 5px 5px #ffb33f;padding: 10px; max-width: 100rem;justify-content: center;">
-                <h3 class="card-header">{{pitch.title}}</h3>
                 <div class="card-body">
                         <p style="font-size:25px;"> Posted on:&nbsp;&nbsp;{{pitch.date.strftime('%Y-%m-%d')}}</p>
                         <h4 class="text-center" style="font-size:24px;"> Pitch:&nbsp;&nbsp;{{pitch.pitch}}</h4>
-                        <footer class="blockquote-footer text-center" style="font-size:20px;"> Posted by: &nbsp;&nbsp;{{pitch.username| capitalize}}
-                        </footer>
-                        <br>
                         <div style="font-size:20px;"">
                                 <span class="footer"> <a href="{{url_for('main.upvote',pitch_id = pitch.id)}}"><i
                                                         class="fa fa-thumbs-up"
