@@ -99,17 +99,6 @@
         }
     },
     {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {
-            "value": "\n```python\nimport flask\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
         "label": "redirect",
         "importPath": "flask",
         "description": "flask",
@@ -133,6 +122,17 @@
     },
     {
         "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "request",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -242,6 +242,17 @@
         }
     },
     {
+        "label": "TextAreaField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "ValidationError",
         "importPath": "wtforms",
         "description": "wtforms",
@@ -276,6 +287,17 @@
     },
     {
         "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "RadioField",
         "importPath": "wtforms",
         "description": "wtforms",
         "isExtraImport": true,
@@ -418,6 +440,17 @@
         }
     },
     {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "markdown2",
         "kind": 6,
         "isExtraImport": true,
@@ -529,6 +562,17 @@
         }
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {
+            "value": "\n```python\nimport datetime\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "generate_password_hash",
         "importPath": "werkzeug.security",
         "description": "werkzeug.security",
@@ -547,17 +591,6 @@
         "detail": "werkzeug.security",
         "documentation": {
             "value": "\n```python\nimport werkzeug.security\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {
-            "value": "\n```python\nimport alembic\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -697,6 +730,39 @@
         }
     },
     {
+        "label": "Comment",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nimport app.models\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Pitch",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nimport app.models\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "PitchCategory",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nimport app.models\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -779,10 +845,10 @@
         "kind": 5,
         "importPath": "app.auth.__init__",
         "description": "app.auth.__init__",
-        "peekOfCode": "auth = Blueprint('auth',__name__)\nfrom . import views,forms",
+        "peekOfCode": "auth = Blueprint('auth', __name__)\nfrom . import views, forms",
         "detail": "app.auth.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.__init__ import auth\n```\n\n```python\n\n\n```\n\n```python\nauth = Blueprint('auth',__name__)\nfrom . import views,forms\n```\n",
+            "value": "\n```python\nfrom app.auth.__init__ import auth\n```\n\n```python\n\n\n```\n\n```python\nauth = Blueprint('auth', __name__)\nfrom . import views, forms\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -791,10 +857,10 @@
         "kind": 6,
         "importPath": "app.auth.forms",
         "description": "app.auth.forms",
-        "peekOfCode": "class RegistrationForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    author = StringField('Enter authors name',validators = [Required()])\n    password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match')])\n    password_confirm = PasswordField('Confirm Passwords',validators = [Required()])\n    submit = SubmitField('Sign Up')\n    def validate_email(self,data_field):\n            if User.query.filter_by(email =data_field.data).first():\n                raise ValidationError('There is an account with that email')\n    def validate_author(self,data_field):",
+        "peekOfCode": "class RegistrationForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    username = StringField('Enter your username',validators = [Required()])\n    password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match')])\n    password_confirm = PasswordField('Confirm Passwords',validators = [Required()])\n    submit = SubmitField('Sign Up')\n    def validate_email(self,data_field):\n        if User.query.filter_by(username=data_field.data).first():\n            raise ValidationError('There is an account with that email')\n    def validate_username(self,data_field):",
         "detail": "app.auth.forms",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.forms import RegistrationForm\n```\n\n```python\n\n\n```\n\n```python\nclass RegistrationForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    author = StringField('Enter authors name',validators = [Required()])\n    password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match')])\n    password_confirm = PasswordField('Confirm Passwords',validators = [Required()])\n    submit = SubmitField('Sign Up')\n    def validate_email(self,data_field):\n            if User.query.filter_by(email =data_field.data).first():\n                raise ValidationError('There is an account with that email')\n    def validate_author(self,data_field):\n```\n",
+            "value": "\n```python\nfrom app.auth.forms import RegistrationForm\n```\n\n```python\n\n\n```\n\n```python\nclass RegistrationForm(FlaskForm):\n    email = StringField('Your Email Address',validators=[Required(),Email()])\n    username = StringField('Enter your username',validators = [Required()])\n    password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match')])\n    password_confirm = PasswordField('Confirm Passwords',validators = [Required()])\n    submit = SubmitField('Sign Up')\n    def validate_email(self,data_field):\n        if User.query.filter_by(username=data_field.data).first():\n            raise ValidationError('There is an account with that email')\n    def validate_username(self,data_field):\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -815,22 +881,10 @@
         "kind": 2,
         "importPath": "app.auth.views",
         "description": "app.auth.views",
-        "peekOfCode": "def login():\n    login_form = LoginForm()\n    if login_form.validate_on_submit():\n        user = User.query.filter_by(email = login_form.email.data).first()\n        if user is not None and user.verify_password(login_form.password.data):\n            login_user(user,login_form.remember.data)\n            return redirect(request.args.get('next') or url_for('main.index'))\n        flash('Invalid author or Password')\n    title = \"Pitches login\"\n    return render_template('auth/login.html',login_form = login_form,title=title)",
+        "peekOfCode": "def login():\n    login_form = LoginForm()\n    if login_form.validate_on_submit():\n        user = User.query.filter_by(email=login_form.email.data).first()\n        if user is not None and user.verify_password(login_form.password.data):\n            login_user(user,login_form.remember.data)\n            return redirect(request.args.get('next') or url_for('main.index'))\n        flash('Invalid username or Password')\n    title = \"Pitch login\"\n    return render_template('auth/login.html',login_form = login_form, title = title)",
         "detail": "app.auth.views",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.views import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    login_form = LoginForm()\n    if login_form.validate_on_submit():\n        user = User.query.filter_by(email = login_form.email.data).first()\n        if user is not None and user.verify_password(login_form.password.data):\n            login_user(user,login_form.remember.data)\n            return redirect(request.args.get('next') or url_for('main.index'))\n        flash('Invalid author or Password')\n    title = \"Pitches login\"\n    return render_template('auth/login.html',login_form = login_form,title=title)\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "register",
-        "kind": 2,
-        "importPath": "app.auth.views",
-        "description": "app.auth.views",
-        "peekOfCode": "def register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"",
-        "detail": "app.auth.views",
-        "documentation": {
-            "value": "\n```python\nfrom app.auth.views import register\n```\n\n```python\n\n\n```\n\n```python\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)\n        title = \"New Account\"\n```\n",
+            "value": "\n```python\nfrom app.auth.views import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    login_form = LoginForm()\n    if login_form.validate_on_submit():\n        user = User.query.filter_by(email=login_form.email.data).first()\n        if user is not None and user.verify_password(login_form.password.data):\n            login_user(user,login_form.remember.data)\n            return redirect(request.args.get('next') or url_for('main.index'))\n        flash('Invalid username or Password')\n    title = \"Pitch login\"\n    return render_template('auth/login.html',login_form = login_form, title = title)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -839,22 +893,22 @@
         "kind": 2,
         "importPath": "app.auth.views",
         "description": "app.auth.views",
-        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for(\"main.index\"))",
+        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for(\"main.index\"))\n@auth.route('/register', methods=[\"GET\", \"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data, username = form.username.data,password =form.password.data)\n        db.session.add(user)\n        db.session.commit()",
         "detail": "app.auth.views",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.views import logout\n```\n\n```python\n\n\n```\n\n```python\ndef logout():\n    logout_user()\n    return redirect(url_for(\"main.index\"))\n```\n",
+            "value": "\n```python\nfrom app.auth.views import logout\n```\n\n```python\n\n\n```\n\n```python\ndef logout():\n    logout_user()\n    return redirect(url_for(\"main.index\"))\n@auth.route('/register', methods=[\"GET\", \"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data, username = form.username.data,password =form.password.data)\n        db.session.add(user)\n        db.session.commit()\n```\n",
             "supportThemeIcons": false
         }
     },
     {
-        "label": "@auth.route('/register',methods",
-        "kind": 5,
+        "label": "register",
+        "kind": 2,
         "importPath": "app.auth.views",
         "description": "app.auth.views",
-        "peekOfCode": "@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)",
+        "peekOfCode": "def register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data, username = form.username.data,password =form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to pitches\",\"email/welcome_user\", user.email,user=user)\n        return redirect(url_for('auth.login'))\n    title = \"Register Now\"\n    return render_template('auth/register.html',title=title, registration_form =form)",
         "detail": "app.auth.views",
         "documentation": {
-            "value": "\n```python\nfrom app.auth.views import @auth.route('/register',methods\n```\n\n```python\n\n\n```\n\n```python\n@auth.route('/register',methods = [\"GET\",\"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data,\n         author = form.author.data,\n         password = form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to One Minute Pitch!\",\"email/welcome_user\",user.email,user=user)\n```\n",
+            "value": "\n```python\nfrom app.auth.views import register\n```\n\n```python\n\n\n```\n\n```python\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        user = User(email = form.email.data, username = form.username.data,password =form.password.data)\n        db.session.add(user)\n        db.session.commit()\n        mail_message(\"Welcome to pitches\",\"email/welcome_user\", user.email,user=user)\n        return redirect(url_for('auth.login'))\n    title = \"Register Now\"\n    return render_template('auth/register.html',title=title, registration_form =form)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -863,22 +917,70 @@
         "kind": 5,
         "importPath": "app.main.__init__",
         "description": "app.main.__init__",
-        "peekOfCode": "main = Blueprint('main',__name__)\nfrom . import views,error",
+        "peekOfCode": "main = Blueprint('main', __name__)\nfrom . import views,error",
         "detail": "app.main.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.main.__init__ import main\n```\n\n```python\n\n\n```\n\n```python\nmain = Blueprint('main',__name__)\nfrom . import views,error\n```\n",
+            "value": "\n```python\nfrom app.main.__init__ import main\n```\n\n```python\n\n\n```\n\n```python\nmain = Blueprint('main', __name__)\nfrom . import views,error\n```\n",
             "supportThemeIcons": false
         }
     },
     {
-        "label": "four_Oh_four",
+        "label": "four_Ow_four",
         "kind": 2,
         "importPath": "app.main.error",
         "description": "app.main.error",
-        "peekOfCode": "def four_Oh_four(error):\n    '''\n    Function to render the 404 error page\n    '''\n    return render_template('fourOhfour.html'),404",
+        "peekOfCode": "def four_Ow_four(error):\n    '''\n    Function to render the 404 error page\n    '''\n    return render_template('fourOwfour.html'),404",
         "detail": "app.main.error",
         "documentation": {
-            "value": "\n```python\nfrom app.main.error import four_Oh_four\n```\n\n```python\n\n\n```\n\n```python\ndef four_Oh_four(error):\n    '''\n    Function to render the 404 error page\n    '''\n    return render_template('fourOhfour.html'),404\n```\n",
+            "value": "\n```python\nfrom app.main.error import four_Ow_four\n```\n\n```python\n\n\n```\n\n```python\ndef four_Ow_four(error):\n    '''\n    Function to render the 404 error page\n    '''\n    return render_template('fourOwfour.html'),404\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "CommentsForm",
+        "kind": 6,
+        "importPath": "app.main.forms",
+        "description": "app.main.forms",
+        "peekOfCode": "class CommentsForm(FlaskForm):\n    comment = TextAreaField('Comment', validators=[Required()])\n    submit = SubmitField('Post Comment')\nclass PitchForm(FlaskForm):\n    title = StringField('Title', validators=[Required()])\n    category_id = SelectField('Select Pitch Category', choices=[('1', 'Interview'), ('2', 'Pick Up Lines'), ('3', 'Promotion'), ('4', 'Life'), ('5', 'Product')])\n    pitch = TextAreaField('Create A Pitch', validators=[Required()])\n    submit = SubmitField('Submit Pitch') \nclass UpvoteForm(FlaskForm):\n    '''",
+        "detail": "app.main.forms",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.forms import CommentsForm\n```\n\n```python\n\n\n```\n\n```python\nclass CommentsForm(FlaskForm):\n    comment = TextAreaField('Comment', validators=[Required()])\n    submit = SubmitField('Post Comment')\nclass PitchForm(FlaskForm):\n    title = StringField('Title', validators=[Required()])\n    category_id = SelectField('Select Pitch Category', choices=[('1', 'Interview'), ('2', 'Pick Up Lines'), ('3', 'Promotion'), ('4', 'Life'), ('5', 'Product')])\n    pitch = TextAreaField('Create A Pitch', validators=[Required()])\n    submit = SubmitField('Submit Pitch') \nclass UpvoteForm(FlaskForm):\n    '''\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "PitchForm",
+        "kind": 6,
+        "importPath": "app.main.forms",
+        "description": "app.main.forms",
+        "peekOfCode": "class PitchForm(FlaskForm):\n    title = StringField('Title', validators=[Required()])\n    category_id = SelectField('Select Pitch Category', choices=[('1', 'Interview'), ('2', 'Pick Up Lines'), ('3', 'Promotion'), ('4', 'Life'), ('5', 'Product')])\n    pitch = TextAreaField('Create A Pitch', validators=[Required()])\n    submit = SubmitField('Submit Pitch') \nclass UpvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for upvoting a pitch\n    '''\n    submit = SubmitField('Upvote')",
+        "detail": "app.main.forms",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.forms import PitchForm\n```\n\n```python\n\n\n```\n\n```python\nclass PitchForm(FlaskForm):\n    title = StringField('Title', validators=[Required()])\n    category_id = SelectField('Select Pitch Category', choices=[('1', 'Interview'), ('2', 'Pick Up Lines'), ('3', 'Promotion'), ('4', 'Life'), ('5', 'Product')])\n    pitch = TextAreaField('Create A Pitch', validators=[Required()])\n    submit = SubmitField('Submit Pitch') \nclass UpvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for upvoting a pitch\n    '''\n    submit = SubmitField('Upvote')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "UpvoteForm",
+        "kind": 6,
+        "importPath": "app.main.forms",
+        "description": "app.main.forms",
+        "peekOfCode": "class UpvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for upvoting a pitch\n    '''\n    submit = SubmitField('Upvote')\nclass DownvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for downvoting a pitch\n    '''\n    submit = SubmitField('Downvote')",
+        "detail": "app.main.forms",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.forms import UpvoteForm\n```\n\n```python\n\n\n```\n\n```python\nclass UpvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for upvoting a pitch\n    '''\n    submit = SubmitField('Upvote')\nclass DownvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for downvoting a pitch\n    '''\n    submit = SubmitField('Downvote')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "DownvoteForm",
+        "kind": 6,
+        "importPath": "app.main.forms",
+        "description": "app.main.forms",
+        "peekOfCode": "class DownvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for downvoting a pitch\n    '''\n    submit = SubmitField('Downvote')\nclass UpdateProfile(FlaskForm):\n    bio = TextAreaField('Tell us about you.',validators = [Required()])\n    submit = SubmitField('Submit')",
+        "detail": "app.main.forms",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.forms import DownvoteForm\n```\n\n```python\n\n\n```\n\n```python\nclass DownvoteForm(FlaskForm):\n    '''\n    Class to create a wtf form for downvoting a pitch\n    '''\n    submit = SubmitField('Downvote')\nclass UpdateProfile(FlaskForm):\n    bio = TextAreaField('Tell us about you.',validators = [Required()])\n    submit = SubmitField('Submit')\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -899,34 +1001,130 @@
         "kind": 2,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "def index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)\n@main.route('/user/<uname>')\ndef profile(uname):\n    user = User.query.filter_by(author = uname).first()",
+        "peekOfCode": "def index():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Home - qWelcome this is where you belong'\n    pitches= Pitch.get_all_pitches()  \n    return render_template('index.html', title = title, pitches= pitches)\n@main.route('/all')\ndef all():\n    '''",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import index\n```\n\n```python\n\n\n```\n\n```python\ndef index():\n    '''\n    View root page function that returns index page \n    '''\n    message= \"Hello\"\n    title = 'Welcome To One Minute Pitch'\n    return render_template('index.html', message=message,title=title)\n@main.route('/user/<uname>')\ndef profile(uname):\n    user = User.query.filter_by(author = uname).first()\n```\n",
+            "value": "\n```python\nfrom app.main.views import index\n```\n\n```python\n\n\n```\n\n```python\ndef index():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Home - qWelcome this is where you belong'\n    pitches= Pitch.get_all_pitches()  \n    return render_template('index.html', title = title, pitches= pitches)\n@main.route('/all')\ndef all():\n    '''\n```\n",
             "supportThemeIcons": false
         }
     },
     {
-        "label": "profile",
+        "label": "all",
         "kind": 2,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "def profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    return render_template(\"profile/profile.html\", user = user)\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:",
+        "peekOfCode": "def all():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Home - Welcome this is where you belong'\n    pitches= Pitch.get_all_pitches() \n    return render_template('all.html', title = title, pitches= pitches)\n@main.route('/inteview/pitches/')\ndef interview():\n    '''",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import profile\n```\n\n```python\n\n\n```\n\n```python\ndef profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    return render_template(\"profile/profile.html\", user = user)\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n```\n",
+            "value": "\n```python\nfrom app.main.views import all\n```\n\n```python\n\n\n```\n\n```python\ndef all():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Home - Welcome this is where you belong'\n    pitches= Pitch.get_all_pitches() \n    return render_template('all.html', title = title, pitches= pitches)\n@main.route('/inteview/pitches/')\ndef interview():\n    '''\n```\n",
             "supportThemeIcons": false
         }
     },
     {
-        "label": "update_profile",
+        "label": "interview",
         "kind": 2,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "def update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n        db.session.commit()\n        return redirect(url_for('.profile',uname=user.author))",
+        "peekOfCode": "def interview():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    pitches= Pitch.get_all_pitches()\n    title = 'Home - Welcome to The best Pitching Website Online'  \n    return render_template('interview.html', title = title, pitches= pitches )\n@main.route('/pick_up_lines/pitches/')\ndef pick_up_line():\n    '''",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import update_profile\n```\n\n```python\n\n\n```\n\n```python\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n        db.session.commit()\n        return redirect(url_for('.profile',uname=user.author))\n```\n",
+            "value": "\n```python\nfrom app.main.views import interview\n```\n\n```python\n\n\n```\n\n```python\ndef interview():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    pitches= Pitch.get_all_pitches()\n    title = 'Home - Welcome to The best Pitching Website Online'  \n    return render_template('interview.html', title = title, pitches= pitches )\n@main.route('/pick_up_lines/pitches/')\ndef pick_up_line():\n    '''\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "pick_up_line",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def pick_up_line():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Pick Up Lines'\n    pitches= Pitch.get_all_pitches()\n    user = User.query.all()\n    return render_template('pick_up_lines.html', title = title, pitches= pitches, user=user )\n@main.route('/promotion/pitches/')\ndef promotion():",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import pick_up_line\n```\n\n```python\n\n\n```\n\n```python\ndef pick_up_line():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Pick Up Lines'\n    pitches= Pitch.get_all_pitches()\n    user = User.query.all()\n    return render_template('pick_up_lines.html', title = title, pitches= pitches, user=user )\n@main.route('/promotion/pitches/')\ndef promotion():\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "promotion",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def promotion():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Promotion Pitches'\n    pitches= Pitch.get_all_pitches()\n    return render_template('promotion.html', title = title, pitches= pitches )\n@main.route('/life/pitches/')\ndef life():\n    '''",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import promotion\n```\n\n```python\n\n\n```\n\n```python\ndef promotion():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Promotion Pitches'\n    pitches= Pitch.get_all_pitches()\n    return render_template('promotion.html', title = title, pitches= pitches )\n@main.route('/life/pitches/')\ndef life():\n    '''\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "life",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def life():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Promotion Pitches'\n    pitches= Pitch.get_all_pitches()\n    return render_template('life.html', title = title, pitches= pitches )\n@main.route('/product/pitches/')\ndef product():\n    '''",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import life\n```\n\n```python\n\n\n```\n\n```python\ndef life():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Promotion Pitches'\n    pitches= Pitch.get_all_pitches()\n    return render_template('life.html', title = title, pitches= pitches )\n@main.route('/product/pitches/')\ndef product():\n    '''\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "product",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def product():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Product Pitches'\n    pitches= Pitch.get_all_pitches()\n    return render_template('product.html', title = title, pitches= pitches )\n@main.route('/pitch/<int:pitch_id>')\ndef pitch(pitch_id):\n    '''",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import product\n```\n\n```python\n\n\n```\n\n```python\ndef product():\n    '''\n    View root page function that returns the index page and its data\n    '''\n    title = 'Product Pitches'\n    pitches= Pitch.get_all_pitches()\n    return render_template('product.html', title = title, pitches= pitches )\n@main.route('/pitch/<int:pitch_id>')\ndef pitch(pitch_id):\n    '''\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "pitch",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def pitch(pitch_id):\n    '''\n    View pitch page function that returns the pitch details page and its data\n    '''\n    found_pitch= Pitch.query.get(pitch_id)\n    title = pitch_id\n    pitch_comments = Comment.get_comments(pitch_id)\n    return render_template('pitch.html',title= title ,found_pitch= found_pitch, pitch_comments= pitch_comments)\n@main.route('/pitch/new/', methods = ['GET','POST'])\n@login_required",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import pitch\n```\n\n```python\n\n\n```\n\n```python\ndef pitch(pitch_id):\n    '''\n    View pitch page function that returns the pitch details page and its data\n    '''\n    found_pitch= Pitch.query.get(pitch_id)\n    title = pitch_id\n    pitch_comments = Comment.get_comments(pitch_id)\n    return render_template('pitch.html',title= title ,found_pitch= found_pitch, pitch_comments= pitch_comments)\n@main.route('/pitch/new/', methods = ['GET','POST'])\n@login_required\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "new_pitch",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def new_pitch():\n    '''\n    Function that creates new pitches\n    '''\n    form = PitchForm()\n    my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)\n    if category is None:\n        abort( 404 )\n    if form.validate_on_submit():\n        pitch= form.content.data",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import new_pitch\n```\n\n```python\n\n\n```\n\n```python\ndef new_pitch():\n    '''\n    Function that creates new pitches\n    '''\n    form = PitchForm()\n    my_upvotes = Upvote.query.filter_by(pitch_id = Pitch.id)\n    if category is None:\n        abort( 404 )\n    if form.validate_on_submit():\n        pitch= form.content.data\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "category",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def category(id):\n    '''\n    function that returns pitches based on the entered category id\n    '''\n    category = PitchCategory.query.get(id)\n    if category is None:\n        abort(404)\n    pitches_in_category = Pitch.get_pitch(id)\n    return render_template('category.html' ,category= category, pitches= pitches_in_category)\n@main.route('/pitch/comments/new/<int:id>',methods = ['GET','POST'])",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import category\n```\n\n```python\n\n\n```\n\n```python\ndef category(id):\n    '''\n    function that returns pitches based on the entered category id\n    '''\n    category = PitchCategory.query.get(id)\n    if category is None:\n        abort(404)\n    pitches_in_category = Pitch.get_pitch(id)\n    return render_template('category.html' ,category= category, pitches= pitches_in_category)\n@main.route('/pitch/comments/new/<int:id>',methods = ['GET','POST'])\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "new_comment",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def new_comment(id):\n    form = CommentsForm()\n    vote_form = UpvoteForm()\n    if form.validate_on_submit():\n        new_comment = Comment(pitch_id =id,comment=form.comment.data,username=current_user.username)\n        new_comment.save_comments()\n        return redirect(url_for('main.all'))\n    return render_template('new_comment.html',comment_form=form, vote_form= vote_form)\n@main.route('/user/<uname>/update/pic',methods= ['POST'])\n@login_required",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import new_comment\n```\n\n```python\n\n\n```\n\n```python\ndef new_comment(id):\n    form = CommentsForm()\n    vote_form = UpvoteForm()\n    if form.validate_on_submit():\n        new_comment = Comment(pitch_id =id,comment=form.comment.data,username=current_user.username)\n        new_comment.save_comments()\n        return redirect(url_for('main.all'))\n    return render_template('new_comment.html',comment_form=form, vote_form= vote_form)\n@main.route('/user/<uname>/update/pic',methods= ['POST'])\n@login_required\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -935,10 +1133,94 @@
         "kind": 2,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "def update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        user_photo = PhotoProfile(pic_path = path,user = user)\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))",
+        "peekOfCode": "def update_pic(uname):\n    user = User.query.filter_by(username = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path \n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))\n@main.route('/user/<uname>')\ndef profile(uname):",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import update_pic\n```\n\n```python\n\n\n```\n\n```python\ndef update_pic(uname):\n    user = User.query.filter_by(author = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path\n        user_photo = PhotoProfile(pic_path = path,user = user)\n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))\n```\n",
+            "value": "\n```python\nfrom app.main.views import update_pic\n```\n\n```python\n\n\n```\n\n```python\ndef update_pic(uname):\n    user = User.query.filter_by(username = uname).first()\n    if 'photo' in request.files:\n        filename = photos.save(request.files['photo'])\n        path = f'photos/{filename}'\n        user.profile_pic_path = path \n        db.session.commit()\n    return redirect(url_for('main.profile',uname=uname))\n@main.route('/user/<uname>')\ndef profile(uname):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "profile",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:\n        abort(404)\n    return render_template(\"profile/profile.html\", user = user)\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import profile\n```\n\n```python\n\n\n```\n\n```python\ndef profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:\n        abort(404)\n    return render_template(\"profile/profile.html\", user = user)\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "update_profile",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def update_profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n        db.session.commit()\n        return redirect(url_for('.profile',uname=user.username))",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import update_profile\n```\n\n```python\n\n\n```\n\n```python\ndef update_profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n        db.session.commit()\n        return redirect(url_for('.profile',uname=user.username))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "view_comments",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def view_comments(id):\n    '''\n    Function that returs  the comments belonging to a particular pitch\n    '''\n    comments = Comment.get_comments(id)\n    return render_template('view_comments.html',comments = comments, id=id)\n@main.route('/test/<int:id>')  \ndef test(id):\n    '''\n    this is route for basic testing",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import view_comments\n```\n\n```python\n\n\n```\n\n```python\ndef view_comments(id):\n    '''\n    Function that returs  the comments belonging to a particular pitch\n    '''\n    comments = Comment.get_comments(id)\n    return render_template('view_comments.html',comments = comments, id=id)\n@main.route('/test/<int:id>')  \ndef test(id):\n    '''\n    this is route for basic testing\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def test(id):\n    '''\n    this is route for basic testing\n    '''\n    pitch =Pitch.query.filter_by(id=1).first()\n    return render_template('test.html',pitch= pitch)\n@main.route('/pitch/upvote/<int:pitch_id>/upvote', methods = ['GET', 'POST'])\n@login_required\ndef upvote(pitch_id):\n    pitch = Pitch.query.get(pitch_id)",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import test\n```\n\n```python\n\n\n```\n\n```python\ndef test(id):\n    '''\n    this is route for basic testing\n    '''\n    pitch =Pitch.query.filter_by(id=1).first()\n    return render_template('test.html',pitch= pitch)\n@main.route('/pitch/upvote/<int:pitch_id>/upvote', methods = ['GET', 'POST'])\n@login_required\ndef upvote(pitch_id):\n    pitch = Pitch.query.get(pitch_id)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "upvote",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def upvote(pitch_id):\n    pitch = Pitch.query.get(pitch_id)\n    user = current_user\n    pitch_upvotes = Upvote.query.filter_by(pitch_id= pitch_id)\n    if Upvote.query.filter(Upvote.user_id==user.id,Upvote.pitch_id==pitch_id).first():\n        return  redirect(url_for('main.all'))\n    new_upvote = Upvote(pitch_id=pitch_id, user = current_user)\n    new_upvote.save_votes()\n    return redirect(url_for('main.all'))\n@main.route('/pitch/downvote/<int:pitch_id>/downvote', methods = ['GET', 'POST'])",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import upvote\n```\n\n```python\n\n\n```\n\n```python\ndef upvote(pitch_id):\n    pitch = Pitch.query.get(pitch_id)\n    user = current_user\n    pitch_upvotes = Upvote.query.filter_by(pitch_id= pitch_id)\n    if Upvote.query.filter(Upvote.user_id==user.id,Upvote.pitch_id==pitch_id).first():\n        return  redirect(url_for('main.all'))\n    new_upvote = Upvote(pitch_id=pitch_id, user = current_user)\n    new_upvote.save_votes()\n    return redirect(url_for('main.all'))\n@main.route('/pitch/downvote/<int:pitch_id>/downvote', methods = ['GET', 'POST'])\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "downvote",
+        "kind": 2,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "def downvote(pitch_id):\n    pitch = Pitch.query.get(pitch_id)\n    user = current_user\n    pitch_downvotes = Downvote.query.filter_by(pitch_id= pitch_id)\n    if Downvote.query.filter(Downvote.user_id==user.id,Downvote.pitch_id==pitch_id).first():\n        return  redirect(url_for('main.all'))\n    new_downvote = Downvote(pitch_id=pitch_id, user = current_user)\n    new_downvote.save_votes()\n    return redirect(url_for('main.all'))",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import downvote\n```\n\n```python\n\n\n```\n\n```python\ndef downvote(pitch_id):\n    pitch = Pitch.query.get(pitch_id)\n    user = current_user\n    pitch_downvotes = Downvote.query.filter_by(pitch_id= pitch_id)\n    if Downvote.query.filter(Downvote.user_id==user.id,Downvote.pitch_id==pitch_id).first():\n        return  redirect(url_for('main.all'))\n    new_downvote = Downvote(pitch_id=pitch_id, user = current_user)\n    new_downvote.save_votes()\n    return redirect(url_for('main.all'))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "@main.route('/pitch/comments/new/<int:id>',methods",
+        "kind": 5,
+        "importPath": "app.main.views",
+        "description": "app.main.views",
+        "peekOfCode": "@main.route('/pitch/comments/new/<int:id>',methods = ['GET','POST'])\n@login_required\ndef new_comment(id):\n    form = CommentsForm()\n    vote_form = UpvoteForm()\n    if form.validate_on_submit():\n        new_comment = Comment(pitch_id =id,comment=form.comment.data,username=current_user.username)\n        new_comment.save_comments()\n        return redirect(url_for('main.all'))\n    return render_template('new_comment.html',comment_form=form, vote_form= vote_form)",
+        "detail": "app.main.views",
+        "documentation": {
+            "value": "\n```python\nfrom app.main.views import @main.route('/pitch/comments/new/<int:id>',methods\n```\n\n```python\n\n\n```\n\n```python\n@main.route('/pitch/comments/new/<int:id>',methods = ['GET','POST'])\n@login_required\ndef new_comment(id):\n    form = CommentsForm()\n    vote_form = UpvoteForm()\n    if form.validate_on_submit():\n        new_comment = Comment(pitch_id =id,comment=form.comment.data,username=current_user.username)\n        new_comment.save_comments()\n        return redirect(url_for('main.all'))\n    return render_template('new_comment.html',comment_form=form, vote_form= vote_form)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -947,10 +1229,10 @@
         "kind": 5,
         "importPath": "app.main.views",
         "description": "app.main.views",
-        "peekOfCode": "@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)",
+        "peekOfCode": "@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)",
         "detail": "app.main.views",
         "documentation": {
-            "value": "\n```python\nfrom app.main.views import @main.route('/user/<uname>/update',methods\n```\n\n```python\n\n\n```\n\n```python\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(author = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n```\n",
+            "value": "\n```python\nfrom app.main.views import @main.route('/user/<uname>/update',methods\n```\n\n```python\n\n\n```\n\n```python\n@main.route('/user/<uname>/update',methods = ['GET','POST'])\n@login_required\ndef update_profile(uname):\n    user = User.query.filter_by(username = uname).first()\n    if user is None:\n        abort(404)\n    form = UpdateProfile()\n    if form.validate_on_submit():\n        user.bio = form.bio.data\n        db.session.add(user)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -959,46 +1241,10 @@
         "kind": 2,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)",
+        "peekOfCode": "def create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    mail.init_app(app)\n    simple.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "login_manager",
-        "kind": 5,
-        "importPath": "app.__init__",
-        "description": "app.__init__",
-        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)",
-        "detail": "app.__init__",
-        "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "login_manager.session_protection",
-        "kind": 5,
-        "importPath": "app.__init__",
-        "description": "app.__init__",
-        "peekOfCode": "login_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations",
-        "detail": "app.__init__",
-        "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager.session_protection\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "login_manager.login_view",
-        "kind": 5,
-        "importPath": "app.__init__",
-        "description": "app.__init__",
-        "peekOfCode": "login_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])",
-        "detail": "app.__init__",
-        "documentation": {
-            "value": "\n```python\nfrom app.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'auth.login'\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n```\n",
+            "value": "\n```python\nfrom app.__init__ import create_app\n```\n\n```python\n\n\n```\n\n```python\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    mail.init_app(app)\n    simple.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1007,10 +1253,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet",
+        "peekOfCode": "bootstrap = Bootstrap()\ndb = SQLAlchemy()\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n```\n",
+            "value": "\n```python\nfrom app.__init__ import bootstrap\n```\n\n```python\n\n\n```\n\n```python\nbootstrap = Bootstrap()\ndb = SQLAlchemy()\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1019,10 +1265,46 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "db = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)",
+        "peekOfCode": "db = SQLAlchemy()\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy()\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager()\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager.session_protection",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "login_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import login_manager.session_protection\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.session_protection = 'strong'\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager.login_view",
+        "kind": 5,
+        "importPath": "app.__init__",
+        "description": "app.__init__",
+        "peekOfCode": "login_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)",
+        "detail": "app.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom app.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'auth.login'\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1031,10 +1313,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "photos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions",
+        "peekOfCode": "photos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import photos\n```\n\n```python\n\n\n```\n\n```python\nphotos = UploadSet('photos',IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n```\n",
+            "value": "\n```python\nfrom app.__init__ import photos\n```\n\n```python\n\n\n```\n\n```python\nphotos = UploadSet('photos', IMAGES)\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1043,10 +1325,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "mail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)",
+        "peekOfCode": "mail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import mail\n```\n\n```python\n\n\n```\n\n```python\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import mail\n```\n\n```python\n\n\n```\n\n```python\nmail = Mail()\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1055,10 +1337,10 @@
         "kind": 5,
         "importPath": "app.__init__",
         "description": "app.__init__",
-        "peekOfCode": "simple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)",
+        "peekOfCode": "simple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    mail.init_app(app)",
         "detail": "app.__init__",
         "documentation": {
-            "value": "\n```python\nfrom app.__init__ import simple\n```\n\n```python\n\n\n```\n\n```python\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    # Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    # configure UploadSet\n    configure_uploads(app, photos)\n    # Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n```\n",
+            "value": "\n```python\nfrom app.__init__ import simple\n```\n\n```python\n\n\n```\n\n```python\nsimple = SimpleMDE()\ndef create_app(config_name):\n    app = Flask(__name__)\n    #Creating the app configurations\n    app.config.from_object(config_options[config_name])\n    #Initializing flask extensions\n    bootstrap.init_app(app)\n    db.init_app(app)\n    login_manager.init_app(app)\n    mail.init_app(app)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1067,22 +1349,10 @@
         "kind": 2,
         "importPath": "app.email",
         "description": "app.email",
-        "peekOfCode": "def mail_message(subject,template,to,**kwargs):\n    sender_email='akumucollins001@gmail.com'\n    email = Message(subject, sender=sender_email, recipients=[to])\n    email.body= render_template(template + \".txt\",**kwargs)\n    email.html = render_template(template + \".html\",**kwargs)\n    mail.send(email)",
+        "peekOfCode": "def mail_message(subject,template,to,**kwargs):\n    subject_pref = 'Pitch It Up!'\n    sender_email = 'akumucollins001@gmail.com'\n    email = Message(subject, sender=sender_email, recipients=[to])\n    email.body = render_template(template + \".txt\", **kwargs)\n    email.html = render_template(template + \".html\",**kwargs)\n    mail.send(email)",
         "detail": "app.email",
         "documentation": {
-            "value": "\n```python\nfrom app.email import mail_message\n```\n\n```python\n\n\n```\n\n```python\ndef mail_message(subject,template,to,**kwargs):\n    sender_email='akumucollins001@gmail.com'\n    email = Message(subject, sender=sender_email, recipients=[to])\n    email.body= render_template(template + \".txt\",**kwargs)\n    email.html = render_template(template + \".html\",**kwargs)\n    mail.send(email)\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "PhotoProfile",
-        "kind": 6,
-        "importPath": "app.models",
-        "description": "app.models",
-        "peekOfCode": "class PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)",
-        "detail": "app.models",
-        "documentation": {
-            "value": "\n```python\nfrom app.models import PhotoProfile\n```\n\n```python\n\n\n```\n\n```python\nclass PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n```\n",
+            "value": "\n```python\nfrom app.email import mail_message\n```\n\n```python\n\n\n```\n\n```python\ndef mail_message(subject,template,to,**kwargs):\n    subject_pref = 'Pitch It Up!'\n    sender_email = 'akumucollins001@gmail.com'\n    email = Message(subject, sender=sender_email, recipients=[to])\n    email.body = render_template(template + \".txt\", **kwargs)\n    email.html = render_template(template + \".html\",**kwargs)\n    mail.send(email)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1091,10 +1361,70 @@
         "kind": 6,
         "importPath": "app.models",
         "description": "app.models",
-        "peekOfCode": "class User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    photos = db.relationship('PhotoProfile',backref = 'user',lazy = \"dynamic\")\n    @property",
+        "peekOfCode": "class User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n    pitch = db.relationship('Pitch',backref = 'user',lazy = \"dynamic\")\n    downvotes = db.relationship('Downvote',backref = 'user',lazy = \"dynamic\")",
         "detail": "app.models",
         "documentation": {
-            "value": "\n```python\nfrom app.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n    author = db.Column(db.String(255))\n    email = db.Column(db.String(255),unique = True,index = True)\n    password_hash = db.Column(db.String(255))\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    photos = db.relationship('PhotoProfile',backref = 'user',lazy = \"dynamic\")\n    @property\n```\n",
+            "value": "\n```python\nfrom app.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n    pitch = db.relationship('Pitch',backref = 'user',lazy = \"dynamic\")\n    downvotes = db.relationship('Downvote',backref = 'user',lazy = \"dynamic\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Pitch",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class Pitch(db.Model):\n    '''\n    Pitch class to define Pitch Objects\n    '''\n    __tablename__ = 'pitch'\n    id = db.Column(db.Integer,primary_key = True)\n    pitch = db.Column(db.String)\n    username = db.Column(db.String(255))\n    category_id = db.Column(db.Integer)\n    date = db.Column(db.DateTime,default=datetime.utcnow)",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import Pitch\n```\n\n```python\n\n\n```\n\n```python\nclass Pitch(db.Model):\n    '''\n    Pitch class to define Pitch Objects\n    '''\n    __tablename__ = 'pitch'\n    id = db.Column(db.Integer,primary_key = True)\n    pitch = db.Column(db.String)\n    username = db.Column(db.String(255))\n    category_id = db.Column(db.Integer)\n    date = db.Column(db.DateTime,default=datetime.utcnow)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Comment",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class Comment(db.Model):\n    __tablename__ = 'comments'\n    id = db.Column(db.Integer,primary_key = True)\n    comment = db.Column(db.String)\n    image_path = db.Column(db.String)\n    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))\n    posted = db.Column(db.DateTime,default=datetime.utcnow)\n    username = db.Column(db.String)\n    def save_comments(self):\n        db.session.add(self)",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import Comment\n```\n\n```python\n\n\n```\n\n```python\nclass Comment(db.Model):\n    __tablename__ = 'comments'\n    id = db.Column(db.Integer,primary_key = True)\n    comment = db.Column(db.String)\n    image_path = db.Column(db.String)\n    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))\n    posted = db.Column(db.DateTime,default=datetime.utcnow)\n    username = db.Column(db.String)\n    def save_comments(self):\n        db.session.add(self)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "PitchCategory",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class PitchCategory(db.Model):\n    '''\n    Function that defines different categories of pitches\n    '''\n    __tablename__ ='pitch_categories'\n    id = db.Column(db.Integer, primary_key=True)\n    name_of_category = db.Column(db.String(255))\n    category_description = db.Column(db.String(255))\n    @classmethod\n    def get_categories(cls):",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import PitchCategory\n```\n\n```python\n\n\n```\n\n```python\nclass PitchCategory(db.Model):\n    '''\n    Function that defines different categories of pitches\n    '''\n    __tablename__ ='pitch_categories'\n    id = db.Column(db.Integer, primary_key=True)\n    name_of_category = db.Column(db.String(255))\n    category_description = db.Column(db.String(255))\n    @classmethod\n    def get_categories(cls):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Downvote",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class Downvote(db.Model):\n    __tablename__ = 'downvotes'\n    '''\n    Function that stores user votes\n    '''\n    id = db.Column(db.Integer, primary_key=True)\n    downvote = db.Column(db.Integer,default=1)\n    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))\n    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))\n    def save_votes(self):",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import Downvote\n```\n\n```python\n\n\n```\n\n```python\nclass Downvote(db.Model):\n    __tablename__ = 'downvotes'\n    '''\n    Function that stores user votes\n    '''\n    id = db.Column(db.Integer, primary_key=True)\n    downvote = db.Column(db.Integer,default=1)\n    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))\n    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))\n    def save_votes(self):\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Upvote",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class Upvote(db.Model):\n    __tablename__ = 'upvotes'\n    '''\n    Function that stores user votes\n    '''\n    id = db.Column(db.Integer, primary_key=True)\n    upvote = db.Column(db.Integer,default=1)\n    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))\n    user_id =  db.Column(db.Integer,db.ForeignKey('users.id'))\n    def save_votes(self):",
+        "detail": "app.models",
+        "documentation": {
+            "value": "\n```python\nfrom app.models import Upvote\n```\n\n```python\n\n\n```\n\n```python\nclass Upvote(db.Model):\n    __tablename__ = 'upvotes'\n    '''\n    Function that stores user votes\n    '''\n    id = db.Column(db.Integer, primary_key=True)\n    upvote = db.Column(db.Integer,default=1)\n    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))\n    user_id =  db.Column(db.Integer,db.ForeignKey('users.id'))\n    def save_votes(self):\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1103,226 +1433,154 @@
         "kind": 2,
         "importPath": "app.models",
         "description": "app.models",
-        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)",
+        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))",
         "detail": "app.models",
         "documentation": {
-            "value": "\n```python\nfrom app.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass PhotoProfile(db.Model):\n    __tablename__ = 'profile_photos'\n    id = db.Column(db.Integer,primary_key = True)\n    pic_path = db.Column(db.String())\n    user_id = db.Column(db.Integer,db.ForeignKey(\"users.id\"))\nclass User(UserMixin,db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer,primary_key = True)\n```\n",
+            "value": "\n```python\nfrom app.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "upgrade",
         "kind": 2,
-        "importPath": "migrations.versions.0bf01389addf_initial_migration",
-        "description": "migrations.versions.0bf01389addf_initial_migration",
-        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.add_column('users', sa.Column('bio', sa.String(length=255), nullable=True))",
-        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "importPath": "migrations.versions.0e0be7ab081d_initial_migration",
+        "description": "migrations.versions.0e0be7ab081d_initial_migration",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.0e0be7ab081d_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import upgrade\n```\n\n```python\n\n\n```\n\n```python\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.add_column('users', sa.Column('bio', sa.String(length=255), nullable=True))\n```\n",
+            "value": "\n```python\nfrom migrations.versions.0e0be7ab081d_initial_migration import upgrade\n```\n\n```python\n\n\n```\n\n```python\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "downgrade",
         "kind": 2,
-        "importPath": "migrations.versions.0bf01389addf_initial_migration",
-        "description": "migrations.versions.0bf01389addf_initial_migration",
-        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'profile_pic_path')\n    op.drop_column('users', 'bio')\n    op.drop_table('profile_photos')\n    # ### end Alembic commands ###",
-        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "importPath": "migrations.versions.0e0be7ab081d_initial_migration",
+        "description": "migrations.versions.0e0be7ab081d_initial_migration",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.0e0be7ab081d_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import downgrade\n```\n\n```python\n\n\n```\n\n```python\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'profile_pic_path')\n    op.drop_column('users', 'bio')\n    op.drop_table('profile_photos')\n    # ### end Alembic commands ###\n```\n",
+            "value": "\n```python\nfrom migrations.versions.0e0be7ab081d_initial_migration import downgrade\n```\n\n```python\n\n\n```\n\n```python\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "revision",
         "kind": 5,
-        "importPath": "migrations.versions.0bf01389addf_initial_migration",
-        "description": "migrations.versions.0bf01389addf_initial_migration",
-        "peekOfCode": "revision = '0bf01389addf'\ndown_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),",
-        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "importPath": "migrations.versions.0e0be7ab081d_initial_migration",
+        "description": "migrations.versions.0e0be7ab081d_initial_migration",
+        "peekOfCode": "revision = '0e0be7ab081d'\ndown_revision = 'c03d3b89a800'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###",
+        "detail": "migrations.versions.0e0be7ab081d_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import revision\n```\n\n```python\n\n\n```\n\n```python\nrevision = '0bf01389addf'\ndown_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n```\n",
+            "value": "\n```python\nfrom migrations.versions.0e0be7ab081d_initial_migration import revision\n```\n\n```python\n\n\n```\n\n```python\nrevision = '0e0be7ab081d'\ndown_revision = 'c03d3b89a800'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "down_revision",
         "kind": 5,
-        "importPath": "migrations.versions.0bf01389addf_initial_migration",
-        "description": "migrations.versions.0bf01389addf_initial_migration",
-        "peekOfCode": "down_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),",
-        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "importPath": "migrations.versions.0e0be7ab081d_initial_migration",
+        "description": "migrations.versions.0e0be7ab081d_initial_migration",
+        "peekOfCode": "down_revision = 'c03d3b89a800'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')",
+        "detail": "migrations.versions.0e0be7ab081d_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import down_revision\n```\n\n```python\n\n\n```\n\n```python\ndown_revision = '2a68210171ca'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n```\n",
+            "value": "\n```python\nfrom migrations.versions.0e0be7ab081d_initial_migration import down_revision\n```\n\n```python\n\n\n```\n\n```python\ndown_revision = 'c03d3b89a800'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "branch_labels",
         "kind": 5,
-        "importPath": "migrations.versions.0bf01389addf_initial_migration",
-        "description": "migrations.versions.0bf01389addf_initial_migration",
-        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')",
-        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "importPath": "migrations.versions.0e0be7ab081d_initial_migration",
+        "description": "migrations.versions.0e0be7ab081d_initial_migration",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.0e0be7ab081d_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import branch_labels\n```\n\n```python\n\n\n```\n\n```python\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n```\n",
+            "value": "\n```python\nfrom migrations.versions.0e0be7ab081d_initial_migration import branch_labels\n```\n\n```python\n\n\n```\n\n```python\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "depends_on",
         "kind": 5,
-        "importPath": "migrations.versions.0bf01389addf_initial_migration",
-        "description": "migrations.versions.0bf01389addf_initial_migration",
-        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )",
-        "detail": "migrations.versions.0bf01389addf_initial_migration",
+        "importPath": "migrations.versions.0e0be7ab081d_initial_migration",
+        "description": "migrations.versions.0e0be7ab081d_initial_migration",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.0e0be7ab081d_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.0bf01389addf_initial_migration import depends_on\n```\n\n```python\n\n\n```\n\n```python\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('profile_photos',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('pic_path', sa.String(), nullable=True),\n    sa.Column('user_id', sa.Integer(), nullable=True),\n    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),\n    sa.PrimaryKeyConstraint('id')\n    )\n```\n",
+            "value": "\n```python\nfrom migrations.versions.0e0be7ab081d_initial_migration import depends_on\n```\n\n```python\n\n\n```\n\n```python\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('pitch', sa.Column('title', sa.String(length=255), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('pitch', 'title')\n    # ### end Alembic commands ###\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "upgrade",
         "kind": 2,
-        "importPath": "migrations.versions.2a68210171ca_initial_migration",
-        "description": "migrations.versions.2a68210171ca_initial_migration",
-        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###",
-        "detail": "migrations.versions.2a68210171ca_initial_migration",
+        "importPath": "migrations.versions.c03d3b89a800_initial_migration",
+        "description": "migrations.versions.c03d3b89a800_initial_migration",
+        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),",
+        "detail": "migrations.versions.c03d3b89a800_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.2a68210171ca_initial_migration import upgrade\n```\n\n```python\n\n\n```\n\n```python\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n```\n",
+            "value": "\n```python\nfrom migrations.versions.c03d3b89a800_initial_migration import upgrade\n```\n\n```python\n\n\n```\n\n```python\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "downgrade",
         "kind": 2,
-        "importPath": "migrations.versions.2a68210171ca_initial_migration",
-        "description": "migrations.versions.2a68210171ca_initial_migration",
-        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('username', sa.VARCHAR(length=255), autoincrement=False, nullable=True))\n    op.drop_index(op.f('ix_users_email'), table_name='users')\n    op.drop_column('users', 'password_hash')\n    op.drop_column('users', 'email')\n    op.drop_column('users', 'author')\n    # ### end Alembic commands ###",
-        "detail": "migrations.versions.2a68210171ca_initial_migration",
+        "importPath": "migrations.versions.c03d3b89a800_initial_migration",
+        "description": "migrations.versions.c03d3b89a800_initial_migration",
+        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('upvotes')\n    op.drop_table('downvotes')\n    op.drop_table('comments')\n    op.drop_table('pitch')\n    op.drop_index(op.f('ix_users_email'), table_name='users')\n    op.drop_table('users')\n    op.drop_table('pitch_categories')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.c03d3b89a800_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.2a68210171ca_initial_migration import downgrade\n```\n\n```python\n\n\n```\n\n```python\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('username', sa.VARCHAR(length=255), autoincrement=False, nullable=True))\n    op.drop_index(op.f('ix_users_email'), table_name='users')\n    op.drop_column('users', 'password_hash')\n    op.drop_column('users', 'email')\n    op.drop_column('users', 'author')\n    # ### end Alembic commands ###\n```\n",
+            "value": "\n```python\nfrom migrations.versions.c03d3b89a800_initial_migration import downgrade\n```\n\n```python\n\n\n```\n\n```python\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('upvotes')\n    op.drop_table('downvotes')\n    op.drop_table('comments')\n    op.drop_table('pitch')\n    op.drop_index(op.f('ix_users_email'), table_name='users')\n    op.drop_table('users')\n    op.drop_table('pitch_categories')\n    # ### end Alembic commands ###\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "revision",
         "kind": 5,
-        "importPath": "migrations.versions.2a68210171ca_initial_migration",
-        "description": "migrations.versions.2a68210171ca_initial_migration",
-        "peekOfCode": "revision = '2a68210171ca'\ndown_revision = '5a6ecc60c49b'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)",
-        "detail": "migrations.versions.2a68210171ca_initial_migration",
+        "importPath": "migrations.versions.c03d3b89a800_initial_migration",
+        "description": "migrations.versions.c03d3b89a800_initial_migration",
+        "peekOfCode": "revision = 'c03d3b89a800'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),",
+        "detail": "migrations.versions.c03d3b89a800_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.2a68210171ca_initial_migration import revision\n```\n\n```python\n\n\n```\n\n```python\nrevision = '2a68210171ca'\ndown_revision = '5a6ecc60c49b'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n```\n",
+            "value": "\n```python\nfrom migrations.versions.c03d3b89a800_initial_migration import revision\n```\n\n```python\n\n\n```\n\n```python\nrevision = 'c03d3b89a800'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "down_revision",
         "kind": 5,
-        "importPath": "migrations.versions.2a68210171ca_initial_migration",
-        "description": "migrations.versions.2a68210171ca_initial_migration",
-        "peekOfCode": "down_revision = '5a6ecc60c49b'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')",
-        "detail": "migrations.versions.2a68210171ca_initial_migration",
+        "importPath": "migrations.versions.c03d3b89a800_initial_migration",
+        "description": "migrations.versions.c03d3b89a800_initial_migration",
+        "peekOfCode": "down_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')",
+        "detail": "migrations.versions.c03d3b89a800_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.2a68210171ca_initial_migration import down_revision\n```\n\n```python\n\n\n```\n\n```python\ndown_revision = '5a6ecc60c49b'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')\n```\n",
+            "value": "\n```python\nfrom migrations.versions.c03d3b89a800_initial_migration import down_revision\n```\n\n```python\n\n\n```\n\n```python\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "branch_labels",
         "kind": 5,
-        "importPath": "migrations.versions.2a68210171ca_initial_migration",
-        "description": "migrations.versions.2a68210171ca_initial_migration",
-        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')\n    # ### end Alembic commands ###",
-        "detail": "migrations.versions.2a68210171ca_initial_migration",
+        "importPath": "migrations.versions.c03d3b89a800_initial_migration",
+        "description": "migrations.versions.c03d3b89a800_initial_migration",
+        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )",
+        "detail": "migrations.versions.c03d3b89a800_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.2a68210171ca_initial_migration import branch_labels\n```\n\n```python\n\n\n```\n\n```python\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')\n    # ### end Alembic commands ###\n```\n",
+            "value": "\n```python\nfrom migrations.versions.c03d3b89a800_initial_migration import branch_labels\n```\n\n```python\n\n\n```\n\n```python\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n```\n",
             "supportThemeIcons": false
         }
     },
     {
         "label": "depends_on",
         "kind": 5,
-        "importPath": "migrations.versions.2a68210171ca_initial_migration",
-        "description": "migrations.versions.2a68210171ca_initial_migration",
-        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')\n    # ### end Alembic commands ###\ndef downgrade():",
-        "detail": "migrations.versions.2a68210171ca_initial_migration",
+        "importPath": "migrations.versions.c03d3b89a800_initial_migration",
+        "description": "migrations.versions.c03d3b89a800_initial_migration",
+        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.create_table('users',",
+        "detail": "migrations.versions.c03d3b89a800_initial_migration",
         "documentation": {
-            "value": "\n```python\nfrom migrations.versions.2a68210171ca_initial_migration import depends_on\n```\n\n```python\n\n\n```\n\n```python\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('users', sa.Column('author', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('email', sa.String(length=255), nullable=True))\n    op.add_column('users', sa.Column('password_hash', sa.String(length=255), nullable=True))\n    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)\n    op.drop_column('users', 'username')\n    # ### end Alembic commands ###\ndef downgrade():\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "description": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###",
-        "detail": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "documentation": {
-            "value": "\n```python\nfrom migrations.versions.5a6ecc60c49b_initial_migration import upgrade\n```\n\n```python\n\n\n```\n\n```python\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "description": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('users')\n    # ### end Alembic commands ###",
-        "detail": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "documentation": {
-            "value": "\n```python\nfrom migrations.versions.5a6ecc60c49b_initial_migration import downgrade\n```\n\n```python\n\n\n```\n\n```python\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('users')\n    # ### end Alembic commands ###\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "revision",
-        "kind": 5,
-        "importPath": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "description": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "peekOfCode": "revision = '5a6ecc60c49b'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')",
-        "detail": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "documentation": {
-            "value": "\n```python\nfrom migrations.versions.5a6ecc60c49b_initial_migration import revision\n```\n\n```python\n\n\n```\n\n```python\nrevision = '5a6ecc60c49b'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "down_revision",
-        "kind": 5,
-        "importPath": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "description": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "peekOfCode": "down_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )",
-        "detail": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "documentation": {
-            "value": "\n```python\nfrom migrations.versions.5a6ecc60c49b_initial_migration import down_revision\n```\n\n```python\n\n\n```\n\n```python\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "branch_labels",
-        "kind": 5,
-        "importPath": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "description": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###",
-        "detail": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "documentation": {
-            "value": "\n```python\nfrom migrations.versions.5a6ecc60c49b_initial_migration import branch_labels\n```\n\n```python\n\n\n```\n\n```python\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "depends_on",
-        "kind": 5,
-        "importPath": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "description": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###\ndef downgrade():",
-        "detail": "migrations.versions.5a6ecc60c49b_initial_migration",
-        "documentation": {
-            "value": "\n```python\nfrom migrations.versions.5a6ecc60c49b_initial_migration import depends_on\n```\n\n```python\n\n\n```\n\n```python\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('username', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###\ndef downgrade():\n```\n",
+            "value": "\n```python\nfrom migrations.versions.c03d3b89a800_initial_migration import depends_on\n```\n\n```python\n\n\n```\n\n```python\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('pitch_categories',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('name_of_category', sa.String(length=255), nullable=True),\n    sa.Column('category_description', sa.String(length=255), nullable=True),\n    sa.PrimaryKeyConstraint('id')\n    )\n    op.create_table('users',\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1389,12 +1647,12 @@
     {
         "label": "UserModelTest",
         "kind": 6,
-        "importPath": "tests.user_test",
-        "description": "tests.user_test",
-        "peekOfCode": "class UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'coyotte@2000')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)\n    def test_no_access_password(self):\n        with self.assertRaises(AttributeError):\n            self.new_user.password\n    def test_password_verification(self):\n        self.assertTrue(self.new_user.verify_password('banana'))",
-        "detail": "tests.user_test",
+        "importPath": "tests.test_user",
+        "description": "tests.test_user",
+        "peekOfCode": "class UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'banana')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)\n    def test_no_access_password(self):\n            with self.assertRaises(AttributeError):\n                self.new_user.password\n    def test_password_verification(self):\n            self.assertTrue(self.new_user.verify_password('banana'))",
+        "detail": "tests.test_user",
         "documentation": {
-            "value": "\n```python\nfrom tests.user_test import UserModelTest\n```\n\n```python\n\n\n```\n\n```python\nclass UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'coyotte@2000')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)\n    def test_no_access_password(self):\n        with self.assertRaises(AttributeError):\n            self.new_user.password\n    def test_password_verification(self):\n        self.assertTrue(self.new_user.verify_password('banana'))\n```\n",
+            "value": "\n```python\nfrom tests.test_user import UserModelTest\n```\n\n```python\n\n\n```\n\n```python\nclass UserModelTest(unittest.TestCase):\n    def setUp(self):\n        self.new_user = User(password = 'banana')\n    def test_password_setter(self):\n        self.assertTrue(self.new_user.pass_secure is not None)\n    def test_no_access_password(self):\n            with self.assertRaises(AttributeError):\n                self.new_user.password\n    def test_password_verification(self):\n            self.assertTrue(self.new_user.verify_password('banana'))\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1451,10 +1709,10 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db,User = User )\nmigrate = Migrate(app,db)\nmanager.add_command('db',MigrateCommand)",
+        "peekOfCode": "def test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app, db = db, User = User, Pitch = Pitch, PitchCategory = PitchCategory)\nif __name__ == '__main__':\n    manager.run()",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import test\n```\n\n```python\n\n\n```\n\n```python\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app,db = db,User = User )\nmigrate = Migrate(app,db)\nmanager.add_command('db',MigrateCommand)\n```\n",
+            "value": "\n```python\nfrom manage import test\n```\n\n```python\n\n\n```\n\n```python\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n    return dict(app = app, db = db, User = User, Pitch = Pitch, PitchCategory = PitchCategory)\nif __name__ == '__main__':\n    manager.run()\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1463,10 +1721,10 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def make_shell_context():\n    return dict(app = app,db = db,User = User )\nmigrate = Migrate(app,db)\nmanager.add_command('db',MigrateCommand)\nif __name__ == '__main__':\n    manager.run()",
+        "peekOfCode": "def make_shell_context():\n    return dict(app = app, db = db, User = User, Pitch = Pitch, PitchCategory = PitchCategory)\nif __name__ == '__main__':\n    manager.run()",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import make_shell_context\n```\n\n```python\n\n\n```\n\n```python\ndef make_shell_context():\n    return dict(app = app,db = db,User = User )\nmigrate = Migrate(app,db)\nmanager.add_command('db',MigrateCommand)\nif __name__ == '__main__':\n    manager.run()\n```\n",
+            "value": "\n```python\nfrom manage import make_shell_context\n```\n\n```python\n\n\n```\n\n```python\ndef make_shell_context():\n    return dict(app = app, db = db, User = User, Pitch = Pitch, PitchCategory = PitchCategory)\nif __name__ == '__main__':\n    manager.run()\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1475,10 +1733,10 @@
         "kind": 5,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "app = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell",
+        "peekOfCode": "app = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import app\n```\n\n```python\n\n\n```\n\n```python\napp = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\n```\n",
+            "value": "\n```python\nfrom manage import app\n```\n\n```python\n\n\n```\n\n```python\napp = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1487,10 +1745,10 @@
         "kind": 5,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "manager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():",
+        "peekOfCode": "manager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import manager\n```\n\n```python\n\n\n```\n\n```python\nmanager = Manager(app)\nmanager.add_command('server',Server)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n```\n",
+            "value": "\n```python\nfrom manage import manager\n```\n\n```python\n\n\n```\n\n```python\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1499,10 +1757,10 @@
         "kind": 5,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "migrate = Migrate(app,db)\nmanager.add_command('db',MigrateCommand)\nif __name__ == '__main__':\n    manager.run()",
+        "peekOfCode": "migrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import migrate\n```\n\n```python\n\n\n```\n\n```python\nmigrate = Migrate(app,db)\nmanager.add_command('db',MigrateCommand)\nif __name__ == '__main__':\n    manager.run()\n```\n",
+            "value": "\n```python\nfrom manage import migrate\n```\n\n```python\n\n\n```\n\n```python\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n    unittest.TextTestRunner(verbosity=2).run(tests)\n@manager.shell\ndef make_shell_context():\n```\n",
             "supportThemeIcons": false
         }
     }

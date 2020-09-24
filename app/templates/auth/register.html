@@ -1,16 +1,15 @@
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
 
-<body class="text-center" style="background-image: url('./photos/three.jpeg')">
-    {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2"> </div>
-            <div class="col-md-8">
-                {{wtf.quick_form(registration_form)}}
-            </div>
-            <div class="col-md-2"></div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"> </div>
+        <div class="col-md-8">
+            {{wtf.quick_form(registration_form)}}
         </div>
+        <div class="col-md-2"></div>
     </div>
-    {% endblock%}
-</body>
+</div>
+
+{% endblock%}
