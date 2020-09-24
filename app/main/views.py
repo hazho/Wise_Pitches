@@ -1,6 +1,5 @@
 from flask import render_template,redirect,url_for, abort,request
 from . import main
-
 from .forms import CommentsForm ,UpdateProfile, PitchForm, UpvoteForm, DownvoteForm
 from ..models import User,Pitch, Comment,PitchCategory,Downvote,Upvote
 from flask_login import login_required, current_user
@@ -27,7 +26,7 @@ def all():
     '''
     View root page function that returns the index page and its data
     '''
-    title = 'Home - Welcome this is where you belong'
+    title = 'Welcome'
 
     
     pitches= Pitch.get_all_pitches() 
@@ -40,7 +39,7 @@ def interview():
     View root page function that returns the index page and its data
     '''
     pitches= Pitch.get_all_pitches()
-    title = 'Home - Welcome to The best Pitching Website Online'  
+    title = 'Pitch Website'  
     return render_template('interview.html', title = title, pitches= pitches )
 
 @main.route('/pick_up_lines/pitches/')
