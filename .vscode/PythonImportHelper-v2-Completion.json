@@ -1350,10 +1350,10 @@
         "kind": 6,
         "importPath": "app.models",
         "description": "app.models",
-        "peekOfCode": "class User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n    pitch = db.relationship('Pitch',backref = 'user',lazy = \"dynamic\")\n    downvotes = db.relationship('Downvote',backref = 'user',lazy = \"dynamic\")",
+        "peekOfCode": "class User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255),index = True)\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n    pitch = db.relationship('Pitch',backref = 'user',lazy = \"dynamic\")\n    downvotes = db.relationship('Downvote',backref = 'user',lazy = \"dynamic\")",
         "detail": "app.models",
         "documentation": {
-            "value": "\n```python\nfrom app.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n    pitch = db.relationship('Pitch',backref = 'user',lazy = \"dynamic\")\n    downvotes = db.relationship('Downvote',backref = 'user',lazy = \"dynamic\")\n```\n",
+            "value": "\n```python\nfrom app.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255),index = True)\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n    pitch = db.relationship('Pitch',backref = 'user',lazy = \"dynamic\")\n    downvotes = db.relationship('Downvote',backref = 'user',lazy = \"dynamic\")\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -1422,10 +1422,10 @@
         "kind": 2,
         "importPath": "app.models",
         "description": "app.models",
-        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))",
+        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255),index = True)\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))",
         "detail": "app.models",
         "documentation": {
-            "value": "\n```python\nfrom app.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n```\n",
+            "value": "\n```python\nfrom app.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(UserMixin, db.Model):\n    __tablename__ = 'users'\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(255),index = True)\n    email = db.Column(db.String(255), unique = True, index = True)\n    bio = db.Column(db.String(255))\n    profile_pic_path = db.Column(db.String())\n    pass_secure = db.Column(db.String(255))\n```\n",
             "supportThemeIcons": false
         }
     },
