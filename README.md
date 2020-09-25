@@ -1,10 +1,10 @@
 ***
 
-# News Highlights
+# Pitch Website
 
-#### **Monday September 14 2020** ;
+#### **Monday September 24 2020** ;
 
-***
+---
 
 ## Author
 > By ** [Akumu Collins](https://github.com/Akumucollins)
@@ -12,33 +12,48 @@
 
 ***
 
-### Here is the **WebPage Screenshoot** ;
+## Description
+>This application allows users to post one minute pitches and also allows other users who have signed up to comment and upvote or downvote a pitch. It also allows a person to signup to be able to access the functionalities of the application
 
-![alt text](img/Screen_shot.png)
 
 ---
 
-## Description
-> This application displays a list of all various news sources and users can view newa articles and their categories. This applications makes use of News API to retrieve top news articles from different news sources with relative categories.
+## Live Link
+[View Site](https://akumucollins-pitches.herokuapp.com)
 
 ***
 
 ## Setup/Installation Requirements
-* install the latest python3 in your computer with $ sudo apt-get update and sudo apt-get install python3.6 command
-* install pip in you computer using $sudo apt install python3-pip command
-* get the project in github
-* copy and  paste the clone link from the global sidebar in github to your terminal
-* use this instead, git clone https://github.com/Akumucollins/News_Headlines.git in your local terminal
-* install virtual environment in your computer also using $ sudo pip3 install virtualenv and $ python3 -m venv myenv command
-* install Flask and other modules using  $ python3.6 -m pip install Flask, $ python3.6 -m pip install Flask-Bootstrap, $ python3.6 -m pip install Flask-Script commands
-* cd to the project directory issued after cloning it.
-* code . /atom . command  to open the text editor
-* to run or open the application program use  $ chmod +x start.sh  $ ./start.sh
-
+To get the code..
+Cloning the repository:
+  ```bash
+ https://github.com/Akumucollins/Wise_Pitches.git
+  ```
+Move to the folder and install requirements
+  ```bash
+  cd Wise_Pitches
+  pip install -r requirements.txt
+  ```
+Exporting Configurations
+  ```bash
+  export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}
+  ```
+Running the application
+  ```bash
+  python3.8 manage.py server
+  ```
+Testing the application
+  ```bash
+  python3.8 manage.py test
+  ```
+Open the application on your browser 
+```bash
+127.0.0.1:5000
+```
 ---
 
 ## Dependencies
->* python3.6
+>* python3.8
 >* pip
 >* virtualenv
 
@@ -52,13 +67,15 @@
 
 ## Specifications
 | Behaviour | Input | Output |
-| --------------- | :----------:| --------: |
-|Display all various news sources | **On page load**  | Various news sources grouped by sources i.e Top Business News|
-|Display a list of articles from  News source | **Click a news source** | Directed to a page with articles from the source|
-|Display title,image,author,date published,link to the source's site| **On page load** | The articles show title,image,author,date published,Link to the source's site  |
-| Display nav tabs with news by category ie Technology | **On navtab click** | Links to news based on category title,image,author,date published and news source,s site button |
-| Display the preview of an article | **On page load** | Each article displays an title,image,link to the source's site,description and published date |
-| To Read the entire article  | **Click the article getmore@ button** | Directed to the news source's site to read the entire article |
+| :---------------- | :---------------: | ------------------: |
+| Load the page | **On page load** | Get all posts, Select login|
+| Select login |  **Email**,**Password** |Redirect to Home page|
+| Select SignUp| **Email**,**Username**,**Password** | Redirect to login|
+| Select Login | **Username** and **password** | Redirect to page with all pitches based on categories and commenting section|
+| Select comment button | **Comment** | Form that you input your comment|
+| Select comment button | **Add Comment** | Form that you input your comment|
+| Select comment button | **View Comment** | Redirect to all comments|
+| Click on submit |  | Redirect to all comments tamplate with your comment and other comments|
 
 ---
 
