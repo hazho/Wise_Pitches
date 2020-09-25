@@ -1662,10 +1662,10 @@
         "kind": 5,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "app = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')",
+        "peekOfCode": "app = create_app('production')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')",
         "detail": "manage",
         "documentation": {
-            "value": "\n```python\nfrom manage import app\n```\n\n```python\n\n\n```\n\n```python\napp = create_app('development')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n```\n",
+            "value": "\n```python\nfrom manage import app\n```\n\n```python\n\n\n```\n\n```python\napp = create_app('production')\nmanager = Manager(app)\nmanager.add_command('server',Server)\nmigrate = Migrate(app,db)\nmanager.add_command('db', MigrateCommand)\n@manager.command\ndef test():\n    \"\"\"Run the unit tests.\"\"\"\n    import unittest\n    tests = unittest.TestLoader().discover('tests')\n```\n",
             "supportThemeIcons": false
         }
     },
